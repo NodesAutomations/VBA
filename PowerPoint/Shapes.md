@@ -44,6 +44,17 @@ Sub ChangeId()
 End Sub
 
 ```
+### Remove Shape From Active Slide
 
+```VBA
+Private Sub RemovePicture(PPSlide As PowerPoint.Slide, PictureName As String)
+    Dim curShape As shape
+    For Each curShape In PPSlide.Shapes
+        If curShape.Name = PictureName Then
+            curShape.Delete
+        End If
+    Next curShape
+End Sub
+```
 
 
