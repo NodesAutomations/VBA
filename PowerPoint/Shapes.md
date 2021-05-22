@@ -69,4 +69,18 @@ Private Function GetShape(PPSlide As PowerPoint.Slide, PictureName As String) As
     Next curShape
 End Function
 ```
+### Add New Picture
 
+```VBA
+'Create New Pic On Same Position as Old One
+    Dim PPShape As shape
+    Set PPShape = PPSlide.Shapes.AddPicture(FileName:=PictureFilePath, _
+                                            LinkToFile:=msoFalse, _
+                                            SaveWithDocument:=msoTrue, _
+                                            Left:=Picture.Left, _
+                                            Top:=Picture.Top, _
+                                            Width:=Picture.Width, _
+                                            Height:=Picture.Height)
+
+    PPShape.Name = Picture.Name
+```
