@@ -44,6 +44,22 @@ Sub ChangeId()
 End Sub
 
 ```
+### Remove Specific type of shapes from Slide
+```VBA
+Private Sub RemoveOldFolderObjects()
+    Dim shape As shape
+    Dim TotalShapes As Integer, i As Integer
+    TotalShapes = ActivePresentation.Slides(1).Shapes.Count
+
+    For i = TotalShapes To 1 Step -1
+        Set shape = ActivePresentation.Slides(1).Shapes(i)
+        If shape.Type = msoLine Then
+            shape.Delete
+        End If
+    Next
+ 
+End Sub
+```
 ### Remove Shape From Active Slide
 
 ```VBA
