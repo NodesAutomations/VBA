@@ -28,3 +28,11 @@ Private Function GetListOfFilePaths() As Object
     
 End Function
 ```
+### Get FileName Without Extension
+
+```vba
+Public Sub Test2()
+    Dim fso As New Scripting.FileSystemObject
+    Debug.Print fso.GetBaseName("MyFile.something.txt")
+End Sub
+```
