@@ -1,3 +1,12 @@
+# Folders
+
+### Create Folder
+```vba
+ If Len(Dir(FolderPath, vbDirectory)) = 0 Then
+        MkDir FolderPath
+ End If
+```
+
 ### Get List Of All FilePaths of Specific Files 
 
 ```vba
