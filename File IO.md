@@ -13,3 +13,17 @@ Private Sub ReadTextFileInArray()
 
 End Sub
 ```
+### Read Text File into single String
+```vba
+Private Sub ReadChatData()
+    Dim chatFilePath As String
+    chatFilePath = "C:\Users\Ryzen2600x\source\repos\Fiverr_muddsidekick_Contest\ChatLog.txt"
+    
+    Dim chatData As String
+    Dim iFile As Integer: iFile = FreeFile
+    Open chatFilePath For Input As #1
+    chatData = Input(LOF(iFile), iFile)
+    Close #1
+    Debug.Print , chatData
+End Sub
+```
