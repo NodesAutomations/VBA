@@ -7,10 +7,17 @@ End Function
 ```
 
 ### Regex to Find All Matches in String
+
+#### Properties
 - Pattern – The pattern you are going to use for matching against the string.
 - IgnoreCase – If True, then the matching ignores letter case.
 - Global – If True, then all the matches of the pattern in the string are found. If False then only the first match is found.
 - MultiLine – If True, pattern matching happens across line breaks.
+
+#### Methods
+- Test – Searches for a pattern in a string and returns True if a match is found.
+- Replace – Replaces the occurrences of the pattern with the replacement string.
+- Execute – Returns matches of the pattern against the string.
 
 ```vba
  Dim regx As New RegExp
