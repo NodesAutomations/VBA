@@ -1,6 +1,6 @@
 ### Run Macro At Specific Interval
 
-```
+```vba
 Public interval As Double
 
 Sub macro_timer()
