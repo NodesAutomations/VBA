@@ -1,3 +1,10 @@
+
+### Application.Wait
+```vba
+'makes the macro pause for approximately 10 seconds
+Application.Wait (Now + TimeValue("0:00:10"))
+```
+
 ### Run Macro At Specific Interval
 
 ```vba
