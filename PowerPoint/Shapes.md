@@ -1,3 +1,8 @@
+### Get Shape Using Name
+```vba
+ActivePresentation.Slides(1).Shapes("Player1Name").TextEffect.Text
+```
+
 ### List All Shapes
 
 ```VBA
