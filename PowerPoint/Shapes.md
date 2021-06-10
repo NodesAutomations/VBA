@@ -90,6 +90,17 @@ Private Function GetShape(PPSlide As PowerPoint.Slide, PictureName As String) As
     Next curShape
 End Function
 ```
+
+### Add Shapes
+```vba
+Private Function AddTextbox(PPSlide As PowerPoint.Slide, leftPos As Integer, topPos As Integer, width As Double, height As Double, data As String) As PowerPoint.shape
+    'Add TextBox With Number
+    Dim PPShape As PowerPoint.shape
+    'Change AutoShapeType as per requirement
+    Set PPShape = PPSlide.Shapes.AddShape(msoShapeRectangle, left:=leftPos, top:=topPos, width:=width, height:=height)
+    Set AddTextbox = PPShape
+End Function
+```
 ### Add New Picture
 
 ```VBA
