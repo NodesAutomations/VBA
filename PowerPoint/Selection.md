@@ -8,3 +8,12 @@ Sub CheckSelectionType()
     '3=TextRange Selected
 End Sub
 ``` 
+### LoopThrough Selected Shapes
+```vba
+Public Sub PrintSelectedShapes()
+    Dim shape As shape
+    For Each shape In ActiveWindow.Selection.ShapeRange
+        Debug.Print , shape.TextFrame.TextRange.Text
+    Next
+End Sub
+```
