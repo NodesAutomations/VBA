@@ -9,5 +9,8 @@ activeSlideIndex = ActivePresentation.SlideShowWindow.View.Slide.SlideIndex
 ### Get Active Slide
 ```vba
 Dim activeSlide As Slide
-Set activeSlide = Application.ActiveWindow.View.Slide
+'For Normal Mode
+Set activeSlide = ActiveWindow.View.Slide
+'For Presentation Mode
+Set activeSlide = ActivePresentation.SlideShowWindow.View.Slide
 ```
