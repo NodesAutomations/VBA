@@ -1,3 +1,41 @@
+### VBA Function TO Delay Execution In Milliseconds
+```
+'VBA function to delay execution:
+
+Function Delay(ms)
+    Delay = Timer + ms / 1000
+    While Timer < Delay: DoEvents: Wend
+End Function
+
+'To delay program execution for 250 milliseconds:
+Delay 250
+```
+```
+'Excel VBA includes the Wait method on the Application object:
+Application.Wait Now + TimeValue("00:00:25")
+'The above will delay VBA execution for 25 seconds. But 
+'Application.Wait is unreliable for delays less than a second.
+
+'There is also the Sleep Win32 API, but the Delay() function above 
+'works better. But here is how to use Sleep. Place the following
+'declarations at the top of a code module:
+
+#If VBA7 Then
+    Public Declare PtrSafe Sub Sleep Lib "kernel32" (ByVal ms As LongPtr)
+#Else
+    Public Declare Sub Sleep Lib "kernel32" (ByVal ms As Long)
+#End If
+
+'Now call like so:
+
+Sleep 250		'this causes Excel and VBA to go dormant for 250 ms.
+
+
+'Both Application.Wait and Sleep() block the entire Excel interface. 
+'Excel literally goes to sleep until the wait period is over. Delay() 
+'does not block the Excel interface; it just prevents VBA from 
+'continuing until the delay is over.
+```
 
 ### Application.Wait
 ```vba
