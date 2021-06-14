@@ -77,6 +77,15 @@ Private Sub RemovePicture(PPSlide As PowerPoint.Slide, PictureName As String)
     Next curShape
 End Sub
 ```
+### Function to Check If ShapeExist
+```vba
+Function IsShapeExists(PPSlide As PowerPoint.Slide, shapeName As String) As Boolean
+    Dim shape As PowerPoint.shape
+    For Each shape In PPSlide.Shapes
+        If shape.Name = shapeName Then IsShapeExists = True
+    Next shape
+End Function
+```
 ### Get Specific Shape From Active Slide
 
 ```VBA
