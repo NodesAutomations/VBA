@@ -1,5 +1,5 @@
 ### VBA Function TO Delay Execution In Milliseconds
-```
+```vba
 'VBA function to delay execution:
 
 Function Delay(ms)
@@ -10,7 +10,7 @@ End Function
 'To delay program execution for 250 milliseconds:
 Delay 250
 ```
-```
+```vba
 'Excel VBA includes the Wait method on the Application object:
 Application.Wait Now + TimeValue("00:00:25")
 'The above will delay VBA execution for 25 seconds. But 
