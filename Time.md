@@ -4,7 +4,7 @@ Sub Test()
     Dim i As Integer
     For i = 1 To 10
         'To delay program execution for 250 milliseconds:
-        Delay 500
+        Delay 250
         Debug.Print TimeValue(Now)
     Next
 End Sub
