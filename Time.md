@@ -1,5 +1,15 @@
 ### VBA Function TO Delay Execution In Milliseconds
 ```vba
+Sub Test()
+    Dim i As Integer
+    For i = 1 To 10
+        'To delay program execution for 250 milliseconds:
+        Delay 500
+        Debug.Print TimeValue(Now)
+    Next
+End Sub
+```
+```vba
 'VBA function to delay execution:
 
 Function Delay(ms)
