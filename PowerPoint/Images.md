@@ -1,4 +1,4 @@
-### Add Imgage From URL To Active Slide
+### Add Image From URL To Active Slide
 ```vba
 Sub AddImageUsingURL()
     Dim imageURL As String
