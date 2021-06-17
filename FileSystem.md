@@ -66,7 +66,23 @@ Public Sub Test2()
     Debug.Print fso.GetBaseName("MyFile.something.txt")
 End Sub
 ```
-
+### Extract File Data Using FileSystem Object
+Add a reference to Microsoft Scripting Runtime
+Early Binding
+```vba
+Dim fso as new FileSystemObject
+Dim fileName As String
+fileName = fso.GetFileName("c:\any path\file.txt")
+```
+Late Binding
+```vba
+With CreateObject("Scripting.FileSystemObject")
+    fileName = .GetFileName(FilePath)
+    extName = .GetExtensionName(FilePath)
+    baseName = .GetBaseName(FilePath)
+    parentName = .GetParentFolderName(FilePath)
+End With
+```
 # Files
 
 ### Get List Of All FilePaths of Specific Files 
