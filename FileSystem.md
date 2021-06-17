@@ -1,4 +1,22 @@
 # Folders
+### Check if Folder Exist
+```vba
+Sub CheckFolderExists ()
+
+Dim strFolderName As String
+Dim strFolderExists As String
+
+    strFolderName = "C:\Users\Nikola\Desktop\VBA articles\Test Folder\"
+    strFolderExists = Dir(strFolderName, vbDirectory)
+
+    If strFolderExists = "" Then
+        MsgBox "The selected folder doesn't exist"
+    Else
+        MsgBox "The selected folder exists"
+    End If
+
+End Sub
+```
 
 ### Create Folder
 ```vba
@@ -58,6 +76,24 @@ End Function
 ```
 # File
 
+### Check if File Exist
+```vba
+Sub CheckFileExists ()
+
+Dim strFileName As String
+Dim strFileExists As String
+
+    strFileName = "C:\Users\Nikola\Desktop\VBA articles\Test File Exists.xlsx"
+    strFileExists = Dir(strFileName)
+
+   If strFileExists = "" Then
+        MsgBox "The selected file doesn't exist"
+    Else
+        MsgBox "The selected file exists"
+    End If
+
+End Sub
+```
 ### Get FileName Without Extension
 
 ```vba
