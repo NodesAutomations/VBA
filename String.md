@@ -1,3 +1,12 @@
+### Function Split String Into Array by deliminator
+```vba
+   Dim StringValue As String
+    StringValue ="Test1,Test2"
+    StringValue = Trim(StringValue)
+    
+    Dim Data()  As String
+    Data = Split(StringValue, ",")
+```
 ### Function To Remove Character From End
 
 ```VBA
