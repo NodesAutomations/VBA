@@ -1,5 +1,5 @@
 ### Code to Select Multiple Files and Replace Current List
-```
+```vba
 Private Sub SelectFilesButton_Click()
     Dim sFilter As String
     sFilter = "PPT Files (*.pptx; *.pptm),*.pptx;*.pptm"
