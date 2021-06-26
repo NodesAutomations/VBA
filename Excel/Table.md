@@ -28,3 +28,14 @@ End Function
     tbl.DataBodyRange(1, 3) = ""
     tbl.DataBodyRange(1, 8) = 0
 ```
+### Loop Through Table
+```vba
+ Dim tbl As ListObject
+    Set tbl = AudioListSheet.ListObjects("AudioCategoryTable")
+    
+    Dim i As Integer
+    For i = 1 To tbl.DataBodyRange.Rows.Count
+        CategoryListBox.AddItem tbl.DataBodyRange.Cells(i, 1)
+    Next
+    
+```
