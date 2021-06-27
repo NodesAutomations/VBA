@@ -2,7 +2,24 @@
 ```vba
 ActivePresentation.Slides(1).Shapes("Player1Name").TextEffect.Text
 ```
+### Shape Property For Positioning
+```vba
+Sub Test()
+    Dim shape As shape
+    Set shape = ActivePresentation.Slides(2).Shapes("Test")
+    
+    With shape
+        Debug.Print , "Name:" & .Name
+        Debug.Print , "Left:" & .Left
+        Debug.Print , "Top:" & .Top
+        Debug.Print , "Width:" & .Width
+        Debug.Print , "Height:" & .Height
+        Debug.Print , "Rotation:" & .Rotation
+        Debug.Print , "ZOrderPosition:" & .ZOrderPosition
+    End With
 
+End Sub
+```
 ### List All Shapes
 
 ```VBA
