@@ -1,3 +1,26 @@
+### Update Word Table
+```vba
+Sub UpdateTable()
+    Dim wdDoc As Document
+    Set wdDoc = ActiveDocument
+    
+    Dim table As table
+    Set table = wdDoc.Tables(1)
+    Debug.Print , table.Rows.Count
+    Debug.Print , table.Columns.Count
+    Debug.Print , table.Cell(1, 1).range.Text
+    
+    'Update Specific Value
+    table.Cell(2, 2).range.Text = "Calculator"
+    
+    'Add New Row
+    table.Rows.Add
+    table.Rows(table.Rows.Count).Cells(1).range.Text = table.Rows.Count - 1
+    table.Rows(table.Rows.Count).Cells(2).range.Text = "Test"
+    table.Rows(table.Rows.Count).Cells(3).range.Text = 10
+End Sub
+```
+
 ### Copy Table From Excel to Active Document
 ```vba
 Sub CopyTableFromExcel()
