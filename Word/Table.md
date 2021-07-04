@@ -17,7 +17,6 @@ Sub CopyTableFromExcel()
     wdDoc.Bookmarks("Table1").Select
 
     'and paste the clipboard contents
-    wdAp
-p.Selection.Paste
+    wdApp.Selection.Paste
 End Sub
 ```
