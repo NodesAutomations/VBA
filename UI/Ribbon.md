@@ -1,5 +1,7 @@
 ### Add Custom Ribbon
-
+- Download [RibbonX Editor](https://github.com/fernandreu/office-ribbonx-editor) to Add Custom Ribbon xml to any xlsm/docm/pptm File
+- Add Custom Tab using Below Template
+- Add Icon PNG files 64px
 
 ### Xml Template
 ```xml
@@ -16,3 +18,5 @@
    </ribbon> 
  </customUI>
 ```
+Attribute Referance
+- Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
