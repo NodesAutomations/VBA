@@ -1,3 +1,30 @@
+# Common
+
+### Code To Loop Through All Files in Folder
+```vba
+Public Sub FindAllPPTFiles()
+    Dim fso As FileSystemObject
+    Dim libraryPath As String
+
+    libraryPath = ThisWorkbook.CustomDocumentProperties("LibraryPath")
+
+    Set fso = New FileSystemObject
+    DoFolder fso.GetFolder(libraryPath)
+End Sub
+
+Sub DoFolder(Folder)
+    Dim subFolder As Folder
+    For Each subFolder In Folder.SubFolders
+        DoFolder subFolder
+    Next
+    Dim file As file
+    For Each file In Folder.Files
+        Debug.Print , file.Path
+    Next
+End Sub
+```
+
+
 # Folders
 ### Check if Folder Exist
 ```vba
