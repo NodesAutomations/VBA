@@ -21,8 +21,6 @@
 ## Attribute Referance
 - Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
 ### Tags
-| First Header  | Second Header |
-| ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
