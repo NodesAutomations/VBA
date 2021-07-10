@@ -21,10 +21,23 @@
 ## Attribute Referance
 - Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
 ### Tags
+| Tag  | Detail |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|enabled	|Specifies whether the control is enabled or not.|
+|id|	Specifies the identifier for a custom control. All custom controls must have unique identifiers.|
+|idMso|	Specifies the identifier of a built-in control.|
+|idQ|	Specifies a qualified identifier for a control.|
+|insertAfterMso|	Specifies the identifier of a built-in control that this control should be inserted after.|
+|insertAfterQ	|Specifies the qualified identifier of a control that this control should be inserted after.|
+|insertBeforeMso|	Specifies the identifier of a built-in control that this control should be inserted before.|
+|insertBeforeQ	|Specifies the qualified identifier of a control that this control should be inserted before.|
+|keytip|	Specifies a string to be used as the keytip for this control.|
+|label|	Specifies a string to be used as the label for this control.|
+|screentip	|Specifies a string to be used as the supertip for this control.|
+|showImage|	Specifies whether this control should display its image.|
+|showLabel|	Specifies whether this control should display its label.|
+|supertip|	Specifies a string to be used as the supertip for this control.|
+|tag	|Specifies an arbitrary string that can be used to hold data or identify the control.|
+|visible	|Specifies whether the control is visible or not.|
 
 
