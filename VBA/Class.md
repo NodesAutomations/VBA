@@ -5,6 +5,7 @@
 - Use to Simplyfy Complex Object
 - Create Common Method or Functionality related to specific Object
 - We can Use it with Array to Crate Collection of Custom Objects to get rid of Index
+- Create More Readable Code
 
 ### Code Snippets
 ```vba
