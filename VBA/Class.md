@@ -1,6 +1,10 @@
 # Class Modules
 
 ### Use Cases
+- Crate Custom Object
+- Use to Simplyfy Complex Object
+- Create Common Method or Functionality related to specific Object
+- We can Use it with Array to Crate Collection of Custom Objects to get rid of Index
 
 ### Code Snippets
 ```vba
