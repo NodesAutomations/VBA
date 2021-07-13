@@ -33,7 +33,23 @@ Public Sub DisplayNode(ByRef Nodes As MSXML2.IXMLDOMNodeList, _
    Next xNode
 End Sub
 ```
+```vba
+Public Sub Test()
+    Dim objXML As MSXML2.DOMDocument
 
+    Set objXML = New MSXML2.DOMDocument
+
+    If Not objXML.Load("C:\Users\Ryzen2600x\Downloads\Point.xml") Then            
+        Err.Raise objXML.parseError.ErrorCode, , objXML.parseError.reason
+    End If
+ 
+    Dim point As IXMLDOMNode
+    Set point = objXML.FirstChild
+
+    Debug.Print point.SelectSingleNode("X").Text
+    Debug.Print point.SelectSingleNode("Y").Text
+End Sub
+```
 
 
 
