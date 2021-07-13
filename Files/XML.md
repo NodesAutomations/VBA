@@ -56,6 +56,7 @@ End Sub
 
 ### Resources
 - [Parse XML using VBA](https://stackoverflow.com/questions/11305/how-to-parse-xml-using-vba)
+- [Microsoft Doc:Beginner's Guide XML DOM](https://docs.microsoft.com/en-us/previous-versions/aa468547(v=msdn.10)?redirectedfrom=MSDN)
 - [Loop through Nodes](https://excel-macro.tutorialhorizon.com/vba-excel-read-xml-by-looping-through-nodes/)
 - [Update XML File](https://excel-macro.tutorialhorizon.com/vba-excel-update-xml-file/)
 - [Read Data From XML](https://excel-macro.tutorialhorizon.com/vba-excel-read-data-from-xml-file/)
