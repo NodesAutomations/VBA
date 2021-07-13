@@ -56,7 +56,42 @@ Public Function ToString() As String
     ToString = CStr(uId) & "|" + CStr(x) & "," & CStr(y) & "," & CStr(z)
 End Function
 ```
+```vba
+Sub Test()
+    Dim n As New Node
+    n.uId = 0
+    n.x = 10: n.y = 20: n.z = 30
+    n.Display
+    Debug.Print , n.ToString
+    Dim arr() As Node
+    ReDim arr(1 To 10)
+    
+    Dim i As Integer
+    
+    For i = 1 To 10
+        Set arr(i) = New Node
+        arr(i).uId = i
+        arr(i).x = 10 * i
+        arr(i).y = 10 * (i + 1)
+        arr(i).z = 10 * (i + 2)
+        Debug.Print , arr(i).ToString
+    Next
+    
+    Dim nodes As New Collection
+    
+    For i = 1 To 10
+        Set n = New Node
+        n.uId = i
+        n.x = 10 * i
+        n.y = 10 * (i + 1)
+        n.z = 10 * (i + 2)
+        nodes.Add n
+    Next
+    
+End Sub
 
+
+```
 
 
 ### Reference
