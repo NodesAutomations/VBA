@@ -20,7 +20,9 @@
 ```
 ## Attribute Referance
 - Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
+- [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
 - [Microsoft Doc](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ee691833(v=office.14)?redirectedfrom=MSDN)
+
 ### Tags
 | Tag  | Detail |
 | ------------- | ------------- |
@@ -42,5 +44,3 @@
 |visible	|Specifies whether the control is visible or not.|
 
 
-### Referances 
-- [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
