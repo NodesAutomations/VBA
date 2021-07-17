@@ -42,3 +42,5 @@
 |visible	|Specifies whether the control is visible or not.|
 
 
+### Referances 
+- [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
