@@ -1,3 +1,13 @@
+### Syntax
+```VBA
+    Dim tbl As ListObject
+    Set tbl = ThisWorkbook.ActiveSheet.ListObjects("Table13")
+    'First row , First column
+    'tbl.Range.Cells(1, 1)
+    'First row , First column above 1 row
+    'tbl.Range.Cells(1, 1).Offset(-1,0)
+```
+
 ### Get Active table
 
 ```VBA
