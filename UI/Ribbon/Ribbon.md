@@ -3,7 +3,8 @@
 - Add Custom Tab using Below Template
 - Add Icon PNG files 64px
 
-### Xml Template
+## Xml Template 
+### Custom Tab
 ```xml
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> 
    <ribbon> 
@@ -18,6 +19,29 @@
    </ribbon> 
  </customUI>
 ```
+### Open Ribbon On Load
+```xml
+<customUI onLoad="RibbonOnLoad" xmlns="http://schemas.microsoft.com/office/2009/07/customui"> 
+   <ribbon> 
+     <tabs> 
+        <tab id="CustomTab" label="Shoeb Lakhi" keytip="S"> 
+         <group id="SampleGroup" label="DataBase"> 
+           <button id="SyncButton" label="&amp;Sync" imageMso="SynchronizeHtml" size="large" onAction="SyncData" />           
+         </group > 
+       </tab> 
+     </tabs> 
+   </ribbon> 
+ </customUI>
+```
+Add This To VBA Module
+```vba
+Public Sub RibbonOnLoad(ribbon As IRibbonUI)
+    Dim ribRibbon As IRibbonUI
+    Set ribRibbon = ribbon
+    ribRibbon.ActivateTab ("CustomTab")
+End Sub
+```
+
 ## Attribute Referance
 - Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
 - [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
