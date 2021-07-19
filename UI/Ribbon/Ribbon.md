@@ -19,7 +19,7 @@
    </ribbon> 
  </customUI>
 ```
-### Open Ribbon On Load
+### Open Custom Ribbon On workbook Load
 ```xml
 <customUI onLoad="RibbonOnLoad" xmlns="http://schemas.microsoft.com/office/2009/07/customui"> 
    <ribbon> 
