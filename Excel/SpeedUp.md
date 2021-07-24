@@ -1,5 +1,6 @@
 ### Tips
-
+- Always Work with Excel Objects Directely don't use Select or Activate Methods or anyother workbook task
+- 
 
 ### Code to Enable/Disable Excel Events
 ```vba
