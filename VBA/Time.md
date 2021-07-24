@@ -1,3 +1,39 @@
+## Time Execution Time
+### Function to Calculate Elapsed time in Seconds
+```vba
+Private Function TimeElapsedSecond(startTime As Double) As Double
+    TimeElapsedSecond = Round(timer - startTime, 2)
+End Function
+```
+### Function to Calculate Elapsed time in HH:MM:SS
+```vba
+Private Function TimeElapsedHHMMSS(startTime As Double) As String
+    TimeElapsedHHMMSS = Format((timer - startTime) / 86400, "hh:mm:ss")
+End Function
+```
+### Sample Code
+```vba
+Sub Test()
+    'Start Timer
+    Dim startTime As Double
+    startTime = timer
+ 
+    'Code
+    Dim i As Integer
+    Dim j As Integer
+    Dim rows As Integer, columns As Integer
+    rows = 10000
+    columns = 10
+    For i = 1 To rows
+        For j = 1 To columns
+            Sheet1.Range("A1").Cells(i, j) = i & "," & j
+        Next
+    Next
+ 
+    'Notify user in seconds
+    MsgBox "This code ran successfully in " & TimeElapsedHHMMSS(startTime) & " seconds", vbInformation
+End Sub
+```
 ### VBA Function TO Delay Execution In Milliseconds
 ```vba
 Sub Test()
