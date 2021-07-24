@@ -1,6 +1,11 @@
 ### Tips
 - Always Work with Excel Objects Directely don't use Select or Activate Methods or anyother workbook task
-- 
+- Avoid Copy Paste Use Direct Assignments
+- Turn On/Off Application Events like automatica calculation, screen Updates etc
+- User Array Object for Storing Data because it's fastest object type
+- Use Advance Filter If you're manipulating Ranges
+
+Reference : [Macro Mastery Youtube](https://www.youtube.com/watch?v=GCSF5tq7pZ0)
 
 ### Code to Enable/Disable Excel Events
 ```vba
