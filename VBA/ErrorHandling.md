@@ -50,5 +50,6 @@ End Sub
     - ![image](https://user-images.githubusercontent.com/60865708/126891604-761278ce-d913-4647-906d-5ad3d58965dd.png)
 
 ### References
+- [Macro Mastery](https://excelmacromastery.com/vba-error-handling/)
 - [Youtube Playlist : MacroMaster](https://www.youtube.com/playlist?list=PL7ScsebMq5uUc1sQaabDWcZuw9kvTYjis)
 
