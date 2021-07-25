@@ -39,3 +39,6 @@ ErrorHandler:
     MsgBox (Err.Description)
 End Sub
 ```
+### References
+- [Youtube Playlist : MacroMaster](https://www.youtube.com/playlist?list=PL7ScsebMq5uUc1sQaabDWcZuw9kvTYjis)
+
