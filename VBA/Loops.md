@@ -93,4 +93,39 @@ Sub EnterCurrentMonthDates()
     Loop
 End Sub
 ```
+## Do Until
+
+### Code Syntax
+```vba
+Do [Until condition]
+[Code block to Execute]
+Loop
+```
+```vba
+Do
+[Code block to Execute]
+Loop [Until condition]
+```
+Behave Same us Do while
+
+## For Each
+
+### Basic Syntax
+```vba
+For Each element In collection
+[Code Block to Execute]
+Next [element]
+```
+### Examples
+Basic Usage
+```vba
+Sub SaveAllWorkbooks()
+    Dim wb As Workbook
+    For Each wb In Workbooks
+        wb.Save
+    Next wb
+End Sub
+```
+- Use the ‘Exit For’ statement in the For Each-Next loop to come out of the loop. 
+
 
