@@ -42,7 +42,7 @@ End Sub
 ### Details of Error Object
 ![image](https://user-images.githubusercontent.com/60865708/126891528-7454754e-42c6-4b35-bc51-48c79bb1cf73.png)
 
-### Error Handing Settings]
+### Error Handing Settings
 - Default
     - ![image](https://user-images.githubusercontent.com/60865708/126891610-977365cd-4e04-4a38-b270-4a8708053cb7.png)
 
