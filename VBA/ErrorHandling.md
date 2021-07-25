@@ -39,7 +39,14 @@ ErrorHandler:
     MsgBox (Err.Description)
 End Sub
 ```
+### Details of Error Object
 ![image](https://user-images.githubusercontent.com/60865708/126891528-7454754e-42c6-4b35-bc51-48c79bb1cf73.png)
+
+### Error Handing Settings]
+Default
+![image](https://user-images.githubusercontent.com/60865708/126891610-977365cd-4e04-4a38-b270-4a8708053cb7.png)
+Change To Break On All Error To Debug if Error Handing code is used and Set Back to Default
+![image](https://user-images.githubusercontent.com/60865708/126891604-761278ce-d913-4647-906d-5ad3d58965dd.png)
 
 ### References
 - [Youtube Playlist : MacroMaster](https://www.youtube.com/playlist?list=PL7ScsebMq5uUc1sQaabDWcZuw9kvTYjis)
