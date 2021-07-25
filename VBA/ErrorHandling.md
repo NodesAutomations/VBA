@@ -49,6 +49,25 @@ End Sub
 - Change To Break On All Error To Debug if Error Handing code is used and Set Back to Default
     - ![image](https://user-images.githubusercontent.com/60865708/126891604-761278ce-d913-4647-906d-5ad3d58965dd.png)
 
+### Raise New Error
+```vba
+Public Const ERROR_INVALID_DATA As Long = vbObjectError + 513
+
+'Raise New Erorr
+Sub Test_Raise_Error()
+    On Error GoTo ErrorHandler
+    Dim x As Integer
+    x = 6
+    If x >= 5 Then
+        Err.Raise ERROR_INVALID_DATA, "Test_Raise_Error", "The value Must Be less than 5"
+    End If
+    
+Done:
+    Exit Sub
+ErrorHandler:
+    MsgBox (Err.Description)
+End Sub
+```
 ### References
 - [Macro Mastery](https://excelmacromastery.com/vba-error-handling/)
 - [Youtube Playlist : MacroMaster](https://www.youtube.com/playlist?list=PL7ScsebMq5uUc1sQaabDWcZuw9kvTYjis)
