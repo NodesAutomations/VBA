@@ -31,3 +31,6 @@ Sub AdvanceFilterCopy()
     dataRange.AdvancedFilter xlFilterCopy, criteriaRange, outputRange
 End Sub
 ```
+
+References 
+- [Macro Mastery](https://www.youtube.com/watch?v=0YNhxVu2a5s)
