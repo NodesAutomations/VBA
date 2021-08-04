@@ -141,17 +141,28 @@ Sub XMLTest()
     If Not xDoc.Load(xmlPath) Then
         Exit Sub
     End If
-    
-    'Loop Through All Nodes
-    Call DisplayNode(xDoc.ChildNodes, 2)
-    
-    'Find Specific Node
+End Sub
+```
+### Code Snippet to Select Specific Node
+```vba
+    Dim presentationPrNode As MSXML2.IXMLDOMNode
+    Set presentationPrNode = xDoc.SelectSingleNode("p:presentationPr")
+
+    Dim clrMruNode As MSXML2.IXMLDOMNode
+    Set clrMruNode = xDoc.SelectSingleNode("p:presentationPr/p:clrMru")
+```
+### Remove Specific Node
+```vba
+  'Find Specific Node
     Dim xNode As MSXML2.IXMLDOMNode
     Set xNode = xDoc.SelectSingleNode("catalog").ChildNodes(0)
+    'Remove it
     xNode.ParentNode.RemoveChild xNode
+    'Save Document
     xDoc.Save (xmlPath)
-End Sub
-
+```
+### Print Child Nodes
+```vba
 Public Sub DisplayNode(ByRef Nodes As MSXML2.IXMLDOMNodeList, _
                        ByVal Indent As Integer)
 
@@ -170,15 +181,6 @@ Public Sub DisplayNode(ByRef Nodes As MSXML2.IXMLDOMNodeList, _
     Next xNode
 End Sub
 ```
-### Code Snippet to Select Specific Node
-```vba
-    Dim presentationPrNode As MSXML2.IXMLDOMNode
-    Set presentationPrNode = xDoc.SelectSingleNode("p:presentationPr")
-
-    Dim clrMruNode As MSXML2.IXMLDOMNode
-    Set clrMruNode = xDoc.SelectSingleNode("p:presentationPr/p:clrMru")
-```
-
 ### Resources
 - [Parse XML using VBA](https://stackoverflow.com/questions/11305/how-to-parse-xml-using-vba)
 - [Microsoft Doc:Beginner's Guide XML DOM](https://docs.microsoft.com/en-us/previous-versions/aa468547(v=msdn.10)?redirectedfrom=MSDN)
