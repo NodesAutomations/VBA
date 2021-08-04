@@ -1,9 +1,8 @@
 ### Read Xml File Using MSXML
-- Add Reference to Microsoft XML, v3.0
+- Add Reference to Microsoft XML, v6.0
 ```vba
 Public Sub LoadDocument()
-    Dim xDoc As MSXML2.DOMDocument
-    Set xDoc = New MSXML2.DOMDocument
+     Dim xDoc As New MSXML2.DOMDocument60
     xDoc.validateOnParse = False
     If xDoc.Load("C:\Users\Ryzen2600x\Downloads\Point.xml") Then
         ' The document loaded successfully.
@@ -35,9 +34,7 @@ End Sub
 ```
 ```vba
 Public Sub Test()
-    Dim objXML As MSXML2.DOMDocument
-
-    Set objXML = New MSXML2.DOMDocument
+    Dim objXML As  New MSXML2.DOMDocument60
 
     If Not objXML.Load("C:\Users\Ryzen2600x\Downloads\Point.xml") Then            
         Err.Raise objXML.parseError.ErrorCode, , objXML.parseError.reason
