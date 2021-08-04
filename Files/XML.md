@@ -2,6 +2,11 @@
 - Add Reference to Microsoft XML, v6.0
 
 ### Sample XML File for Testing
+<details>
+<summary>Click to toggle contents of `code`</summary>
+  Add Here Whatever YOu want
+</details>
+
 ```xml
 <?xml version="1.0"?>
 <catalog>
