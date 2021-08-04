@@ -3,9 +3,7 @@
 
 ### Sample XML File for Testing
 <details>
-<summary>Click to toggle contents of `code`</summary>
-  Add Here Whatever YOu want
-</details>
+<summary>XML File</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -129,6 +127,8 @@
    </book>
 </catalog>
 ```
+</details>
+
 ### Sample Code TO Read XML and Remove First Child Node
 ```vba
 Sub XMLTest()
