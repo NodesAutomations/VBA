@@ -32,3 +32,24 @@ Select Case Expression
         StatementN
 End Select 
 ```
+Multiple Cases
+```vba
+' https://excelmacromastery.com/
+Public Sub Select_Case_Multi()
+
+    Dim city As String
+    ' Change value to test
+    city = "Dublin"
+    
+    ' Print the name of the airport based on the code
+    Select Case city
+        Case "Paris", "London", "Dublin"
+            Debug.Print "Europe"
+        Case "Singapore", "Hanoi"
+            Debug.Print "Asia"
+        Case Else
+            MsgBox "The city is not valid.", vbInformation
+    End Select
+
+End Sub
+```
