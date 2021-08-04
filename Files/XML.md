@@ -145,12 +145,17 @@ End Sub
 ```
 ### Code Snippet to Select Specific Node
 ```vba
+   'Set NameSpace if you xml has nameSpaces
+   'below example has p: nameSpace
+   xDoc.SetProperty "SelectionNamespaces", "xmlns:p=""http://schemas.openxmlformats.org/presentationml/2006/main"""
+
     Dim presentationPrNode As MSXML2.IXMLDOMNode
     Set presentationPrNode = xDoc.SelectSingleNode("p:presentationPr")
 
     Dim clrMruNode As MSXML2.IXMLDOMNode
     Set clrMruNode = xDoc.SelectSingleNode("p:presentationPr/p:clrMru")
 ```
+ 
 ### Remove Specific Node
 ```vba
   'Find Specific Node
