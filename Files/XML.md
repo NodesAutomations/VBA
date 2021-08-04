@@ -165,7 +165,14 @@ Public Sub DisplayNode(ByRef Nodes As MSXML2.IXMLDOMNodeList, _
     Next xNode
 End Sub
 ```
- 
+### Code Snippet to Select Specific Node
+```vba
+    Dim presentationPrNode As MSXML2.IXMLDOMNode
+    Set presentationPrNode = xDoc.SelectSingleNode("p:presentationPr")
+
+    Dim clrMruNode As MSXML2.IXMLDOMNode
+    Set clrMruNode = xDoc.SelectSingleNode("p:presentationPr/p:clrMru")
+```
 
 ### Resources
 - [Parse XML using VBA](https://stackoverflow.com/questions/11305/how-to-parse-xml-using-vba)
