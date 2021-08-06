@@ -121,6 +121,13 @@ Dim strFileExists As String
 
 End Sub
 ```
+### Check if File Locked
+```vba
+ If Functions.FileInUse(docPath) Then
+        MsgBox ("this function cannot be used on an opened file, please close the file and run the macro again")
+        Exit Sub
+    End If
+```
 ### Get FileName Without Extension
 
 ```vba
