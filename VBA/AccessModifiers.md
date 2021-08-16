@@ -23,4 +23,4 @@ Same Modifier Rules Apply for Function also
 Also We can call public Methods directly without using call
 
 ### Protip
-- User `Option Private Module` In Beginning/ Top of Module to Stop being exposed as macro or UDF
+- Use `Option Private Module` In Beginning/ Top of Module to Stop being exposed as macro or UDF
