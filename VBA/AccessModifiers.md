@@ -2,12 +2,14 @@
 ```vba
 Option Explicit
 
-'Available thorough Macro
+'Available thorough all Modules
+'Exposed as Macro
 Sub Test()
     MsgBox "Hello"
 End Sub
 
-'Available thorough Macro
+'Available thorough all Modules
+'Exposed as Macro
 Public Sub PublicTest()
     MsgBox "Hello"
 End Sub
@@ -16,5 +18,9 @@ End Sub
 Private Sub PrivateTest()
     MsgBox "Hello"
 End Sub
-
 ```
+Same Modifier Rules Apply for Function also
+Also We can call public Methods directly without using call
+
+### Protip
+- User `Option Private Module` In Beginning/ Top of Module to Stop being exposed as macro or UDF
