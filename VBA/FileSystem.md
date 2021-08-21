@@ -105,6 +105,10 @@ End Function
 
 ### Get File From User
 ```vba
+    Dim Path As String
+    Path = Functions.GetFileFromUser("PowerPoint Files", "*.pptx,*.pptm")
+```
+```vba
 Public Function GetFileFromUser(Optional filterTitle As String = "All Files", Optional filters As String = "*.*") As String
     'Set the Initial directory path
     Dim directory As String
