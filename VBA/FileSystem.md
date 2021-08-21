@@ -103,6 +103,33 @@ End Function
 ```
 # File
 
+### Get File From User
+```vba
+Public Function GetFileFromUser(Optional filterTitle As String = "All Files", Optional filters As String = "*.*") As String
+    'Set the Initial directory path
+    Dim directory As String
+    directory = ThisWorkbook.Path & "\"
+    
+    'Folder Dialog
+    Dim fd As FileDialog
+    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+    With fd
+        .AllowMultiSelect = False
+        .InitialFileName = directory
+        If filters <> "" Then
+            .filters.Clear
+            .filters.Add filterTitle, filters
+            .FilterIndex = 1
+        End If
+    End With
+    Dim filePath
+    If fd.Show = -1 Then
+        filePath = fd.SelectedItems(1)
+        GetFileFromUser = filePath
+    End If
+    Set fd = Nothing
+End Function
+```
 ### Check if File Exist
 ```vba
 Sub CheckFileExists ()
