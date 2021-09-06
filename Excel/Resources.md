@@ -11,3 +11,4 @@
 - [Excel VBA: Referring to Ranges & Writing to Cells (Range, Cells, Offset, Names)](https://www.youtube.com/watch?v=acGJb9Oojho)
 - [Excel VBA: Master the VBA Call Stack](https://www.youtube.com/watch?v=x6-tdmYNKCw)
 - [How to Automate Excel with Python(step-by-step tutorial)](https://www.youtube.com/watch?v=6qo3ly3-_I8)
+- [Extract text from images using excel vba with Tesseract OCR](https://www.youtube.com/watch?v=4VP54f0xV-E)
