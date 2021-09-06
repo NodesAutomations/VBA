@@ -21,6 +21,10 @@ arr=Sheet1.Range("E8").CurrentRegion.Value
 dim rg as Range
 set rg=Sheet1.Range("E8").CurrentRegion
 
+'Reading Data From Range
 dim arr as Variant
 arr=rg.Value
+
+'Writing Data from Range
+Sheet1.Range("I8:M18").Value=arr
 ```
