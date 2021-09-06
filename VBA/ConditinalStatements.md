@@ -18,7 +18,13 @@ Else
    Statements2
 End if
 ```
-
+## IIF 
+### Code syntax
+```vba
+Function CheckIt (TestMe As Integer)
+    CheckIt = IIf(TestMe > 1000, "Large", "Small")
+End Function
+```
 ### Select Case
 
 ### Code Syntax
