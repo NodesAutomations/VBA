@@ -16,3 +16,11 @@ Sheet1.Range("E8").CurrentRegion.Address
 Dim arr as Variant
 arr=Sheet1.Range("E8").CurrentRegion.Value
 ```
+### Store Range In Arrray For Faster Processing
+```vba
+dim rg as Range
+set rg=Sheet1.Range("E8").CurrentRegion
+
+dim arr as Variant
+arr=rg.Value
+```
