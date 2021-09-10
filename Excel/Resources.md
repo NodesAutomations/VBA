@@ -13,3 +13,4 @@
 - [How to Automate Excel with Python(step-by-step tutorial)](https://www.youtube.com/watch?v=6qo3ly3-_I8)
 - [Extract text from images using excel vba with Tesseract OCR](https://www.youtube.com/watch?v=4VP54f0xV-E)
 - [How to use ADO and VBA to Read from a Database](https://www.youtube.com/watch?v=U_Eahf6O59Q)
+- [Extract Data From PDF Form using Foxit Reader](https://www.youtube.com/watch?v=TB7C3pey2rs)
