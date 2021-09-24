@@ -49,3 +49,43 @@ End Function
     Next
     
 ```
+### Sort Table
+```vba
+Sub Sort()
+    Dim ws As Worksheet
+    Dim tbl As ListObject
+    Dim rng As Range
+    
+    Set ws = ActiveSheet
+    Set tbl = ws.ListObjects("myTable")
+    Set rng = Range("myTable[Numbers]")
+    
+    With tbl.Sort
+       .SortFields.Clear
+       .SortFields.Add Key:=rng, SortOn:=xlSortOnValues, Order:=xlAscending
+       .Header = xlYes
+       .Apply
+    End With
+End Sub
+```
+Sort Multiple Column
+```vba
+Sub Sort()
+    Dim ws As Worksheet
+    Dim tbl As ListObject
+    Dim rng As Range
+    
+    Set ws = ActiveSheet
+    Set tbl = ws.ListObjects("myTable")
+    Set rng1 = Range("myTable[First Name]")
+    Set rng2 = Range("myTable[Last Name]")
+    
+    With tbl.Sort
+        .SortFields.Clear
+        .SortFields.Add Key:=rng1, Order:=xlAscending
+        .SortFields.Add Key:=rng2, Order:=xlAscending
+        .Header = xlYes
+        .Apply
+    End With
+End Sub
+```
