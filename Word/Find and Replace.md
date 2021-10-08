@@ -23,3 +23,4 @@ End Sub
 ```
 ### find And Replace Tips
 - To remove Blank Lines Between Paragraphs Find:"^p^p" and Replace with "^p"
+- To remove Extra Space after sentence Find:".  " and Replace with ". "
