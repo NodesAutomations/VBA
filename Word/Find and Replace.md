@@ -21,3 +21,5 @@ Private Sub FindAndReplace(wdDoc As Word.Document, findString As String, replace
 End Sub
 
 ```
+### find And Replace Tips
+- To remove Blank Lines Between Paragraphs Find:"^p^p" and Replace with "^p"
