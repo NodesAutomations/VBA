@@ -24,19 +24,17 @@ End Function
 ```
 ### Clear Table
 ```vba
-    Dim tbl As ListObject
-    Set tbl = ThisWorkbook.ActiveSheet.ListObjects("SaleTable")
-    
+ Private Sub ClearTableData(tbl As ListObject)
     'Delete all table rows except first row
     With tbl.DataBodyRange
         If .Rows.Count > 1 Then
             .Offset(1, 0).Resize(.Rows.Count - 1, .Columns.Count).Rows.Delete
         End If
     End With
-    tbl.DataBodyRange(1, 1) = ""
-    tbl.DataBodyRange(1, 2) = ""
-    tbl.DataBodyRange(1, 3) = ""
-    tbl.DataBodyRange(1, 8) = 0
+    
+    'Clear First Row
+    tbl.range.Rows(2).Clear
+End Sub
 ```
 ### Loop Through Table
 ```vba
