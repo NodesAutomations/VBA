@@ -10,7 +10,7 @@ End Sub
 ```
 
 ### Loop Through Each Section
-```   
+```vba
     Dim i As Integer
     For i = 1 To ActivePresentation.SectionProperties.Count
         Debug.Print ActivePresentation.SectionProperties.Name(i)
