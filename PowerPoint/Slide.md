@@ -14,3 +14,11 @@ Set activeSlide = ActiveWindow.View.Slide
 'For Presentation Mode
 Set activeSlide = ActivePresentation.SlideShowWindow.View.Slide
 ```
+
+### Loop Through All Slides
+```vba
+    Dim slide As slide
+    For Each slide In ActivePresentation.Slides
+       Debug.Print slide.SlideIndex
+    Next
+```
