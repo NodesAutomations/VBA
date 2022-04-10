@@ -22,3 +22,15 @@ Set activeSlide = ActivePresentation.SlideShowWindow.View.Slide
        Debug.Print slide.SlideIndex
     Next
 ```
+### Get Slide Title
+```vba
+Sub Test()
+    Dim slide As slide
+ 
+    For Each slide In ActivePresentation.Slides
+        If slide.Shapes.HasTitle Then
+            Debug.Print slide.SlideNumber, slide.Shapes.Title.TextFrame.TextRange.Text
+        End If
+    Next
+End Sub
+```
