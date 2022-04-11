@@ -1,3 +1,15 @@
+### Function to Check if String Contain SubString
+- Instring function basically return postion of substring in string
+- If substring don't exist it returns 0
+```vba
+If InStr(string, substring) > 0 then
+debug.print "String Contain substring"
+else
+debug.Pring "String don't contain any substring"
+end if
+```
+
+
 ### Function Split String Into Array by deliminator
 ```vba
    Dim StringValue As String
