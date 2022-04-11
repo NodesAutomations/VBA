@@ -26,10 +26,12 @@ Set activeSlide = ActivePresentation.SlideShowWindow.View.Slide
 ```vba
 Sub Test()
     Dim slide As slide
- 
+    Dim shape as shape
     For Each slide In ActivePresentation.Slides
         If slide.Shapes.HasTitle Then
             Debug.Print slide.SlideNumber, slide.Shapes.Title.TextFrame.TextRange.Text
+            set shape=slide.shapes.Title
+            Debug.Print shape.Name
         End If
     Next
 End Sub
