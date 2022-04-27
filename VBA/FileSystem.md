@@ -51,7 +51,29 @@ End Sub
         MkDir FolderPath
  End If
 ```
-
+### Get Folder From User
+```vba
+Public Function GetFolderFromUser(Optional filterTitle As String = "Select Folder", Optional filters As String = "*.*") As String
+    'Set the Initial directory path
+    Dim directory As String
+    directory = ActiveDocument.Path & "\"
+    
+    'Folder Dialog
+    Dim fd As FileDialog
+    Set fd = Application.FileDialog(msoFileDialogFolderPicker)
+    With fd
+        .Title = filterTitle
+        .AllowMultiSelect = False
+        .InitialFileName = directory
+    End With
+    Dim filePath
+    If fd.Show = -1 Then
+        filePath = fd.SelectedItems(1)
+        GetFolderFromUser = filePath
+    End If
+    Set fd = Nothing
+End Function
+```
 ### FilePath When Saving it in OneDrive
 ```vba
 Sub TestLocalFullName()
