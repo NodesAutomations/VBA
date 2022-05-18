@@ -41,6 +41,15 @@ Public Sub RibbonOnLoad(ribbon As IRibbonUI)
     ribRibbon.ActivateTab ("CustomTab")
 End Sub
 ```
+Special Symbols
+```
+Ampersand - & [& #38;]
+Forward Slash - / [& #47;]
+Backward Slash - \ [& #92;]
+New Line - [& #13;]
+Apostrophe - ' [& apos;]
+```
+
 
 ## Attribute Referance
 - Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
