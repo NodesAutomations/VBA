@@ -1,0 +1,15 @@
+﻿Option Explicit
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+If Target.Count > 1 Then Exit Sub
+If Not Intersect(Target, Range("E5:L16")) Is Nothing Then
+    Range("A4").Value = Target.Row
+    Pic_Display_On_Click
+Else:
+Range("A4").ClearContents
+On Error Resume Next
+Shapes("SelectionRowPic").Delete
+On Error GoTo 0
+End If
+End Sub
+
