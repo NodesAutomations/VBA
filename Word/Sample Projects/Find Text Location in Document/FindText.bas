@@ -2,17 +2,39 @@ Attribute VB_Name = "FindText"
 '@Folder("Project")
 Option Explicit
 
-Sub FindText()
+Sub CheckText()
+    Dim wdDoc As Document
+    Set wdDoc = ActiveDocument
+
+    Dim MyRange As Range
+    'Use Content when you want to find range in whole document
+    'Set MyRange = ActiveDocument.Content
+    'Use Range when you want to ignore tables,headers and footer
+    Set MyRange = ActiveDocument.Range
+    MyRange.Find.Execute FindText:="<<Test3dd1>>"
+ 
+    If Not MyRange.Find.Found Then
+        MsgBox MyRange.Find.Text
+    End If
+    'MyRange.Paste
+   
+End Sub
+
+Sub FindTextPosition()
     Dim wdDoc As Document
     Set wdDoc = ActiveDocument
 
     Dim MyRange As Range
     Set MyRange = ActiveDocument.Range
-    MyRange.Find.Execute FindText:="<<Test1>>"
+    With ActiveDocument.Range.Find
+        .Text = "<<Test1>>"
+        .Execute
+    
+    End With
+    ' MyRange.Find.Execute FindText:="<<Test11>>"
  
-    MsgBox "Position = " & MyRange.Text
-    MyRange.Paste
-   
+    'MsgBox "Position = " & MyRange.Text
+ 
 End Sub
 
 Sub findTextInsideTable()
