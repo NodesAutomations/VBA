@@ -21,6 +21,24 @@ Sub Test()
 End Sub
 
 ```
+### Get Primary Count
+```vba
+Sub Test()
+
+    Dim objOpenSTAAD As Object
+    Dim selbeamsNo As Long
+    Dim SelBeams() As Long
+
+    'Launch the OpenSTAAD Object
+    Set objOpenSTAAD = GetObject(, "StaadPro.OpenSTAAD")
+    
+    'Get Primary Load Count
+    Dim lPrimaryLoadCaseCount  As Long
+    lPrimaryLoadCaseCount = objOpenSTAAD.Load.GetPrimaryLoadCaseCount
+    Debug.Print lPrimaryLoadCaseCount
+    
+End Sub
+```
 ## Load Combination
 ### Get Load Combination Case Count
 ```vba
