@@ -1,4 +1,5 @@
 ### Get Load Case Title
+- this code with work for all loads primary loads, moving loads or load combinations
 ```vba
 Sub Test()
 
