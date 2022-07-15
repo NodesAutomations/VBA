@@ -24,6 +24,15 @@ End Function
 ```
 ### Get Table Using only Name
 ```vba
+Private Function GetTableObject(tableName As String) As Excel.ListObject
+    On Error Resume Next
+    Set GetTableObject = Application.range(tableName).ListObject
+    On Error GoTo 0
+    Call Err.Raise(1004, ThisWorkbook.Name, "Table '" & tableName & "' not found!")
+End Function
+
+```
+```vba
 Public Function GetListObject(ByVal ListObjectName As String, Optional ParentWorksheet As Worksheet = Nothing) As Excel.ListObject
     On Error Resume Next
 
