@@ -28,7 +28,9 @@ Private Function GetTableObject(tableName As String) As Excel.ListObject
     On Error Resume Next
     Set GetTableObject = Application.range(tableName).ListObject
     On Error GoTo 0
-    Call Err.Raise(1004, ThisWorkbook.Name, "Table '" & tableName & "' not found!")
+    If GetTableObject Is Nothing Then
+        Call Err.Raise(1004, ThisWorkbook.Name, "Table '" & tableName & "' not found!")
+    End If
 End Function
 
 ```
