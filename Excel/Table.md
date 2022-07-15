@@ -22,6 +22,30 @@ ERRORHANDLER:
 
 End Function
 ```
+### Get Table Using only Name
+```vba
+Public Function GetListObject(ByVal ListObjectName As String, Optional ParentWorksheet As Worksheet = Nothing) As Excel.ListObject
+    On Error Resume Next
+
+    If (Not ParentWorksheet Is Nothing) Then
+        Set GetListObject = ParentWorksheet.ListObjects(ListObjectName)
+    Else
+        Set GetListObject = Application.range(ListObjectName).ListObject
+    End If
+
+    On Error GoTo 0                              'Or your error handler
+
+    If (Not GetListObject Is Nothing) Then
+        'Success
+    ElseIf (Not ParentWorksheet Is Nothing) Then
+        Call Err.Raise(1004, ThisWorkbook.Name, "ListObject '" & ListObjectName & "' not found on sheet '" & ParentWorksheet.Name & "'!")
+    Else
+        Call Err.Raise(1004, ThisWorkbook.Name, "ListObject '" & ListObjectName & "' not found!")
+    End If
+
+End Function
+
+```
 ### Clear Table
 ```vba
  Private Sub ClearTableData(tbl As ListObject)
