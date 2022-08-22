@@ -72,7 +72,7 @@ End Function
 End Sub
 ```
 ### Clear Table but keep formula's
-```
+```vba
 Private Sub ClearTableData(tbl As ListObject)
     'Delete all table rows except first row
     If Not tbl.Range.Cells(2, 1).HasFormula Then
