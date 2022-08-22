@@ -71,6 +71,34 @@ End Function
     tbl.range.Rows(2).Clear
 End Sub
 ```
+### Clear Table but keep formula's
+```
+Private Sub ClearTableData(tbl As ListObject)
+    'Delete all table rows except first row
+    If Not tbl.Range.Cells(2, 1).HasFormula Then
+        If tbl.Range.Cells(2, 1) = "" Then
+            tbl.Range.Cells(2, 1) = 1
+        End If
+    End If
+    With tbl.DataBodyRange
+        If Not tbl.DataBodyRange Is Nothing Then
+            If .Rows.Count > 1 Then
+                .Offset(1, 0).Resize(.Rows.Count - 1, .Columns.Count).Rows.Delete
+            End If
+        End If
+    End With
+    
+    'Clear First Row but keep formula's
+    Dim j As Integer
+    For j = 1 To tbl.Range.Rows(2).Columns.Count
+        If Not tbl.Range.Cells(2, j).HasFormula Then
+            tbl.Range.Cells(2, j).Clear
+        End If
+    Next
+ 
+End Sub
+```
+
 ### Loop Through Table
 ```vba
  Dim tbl As ListObject
