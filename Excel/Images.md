@@ -27,3 +27,27 @@ Sub Test()
 End Sub
 ```
 
+### Code to Check if cell contain image
+```vba
+Sub CheckIfCellContainPic()
+    Dim sourceRange As Range
+    Set sourceRange = Sheet1.Range("D16")
+        
+    Dim images As New Dictionary
+    Dim shape As shape
+    For Each shape In Sheet1.Shapes
+        'Debug.Print shape.TopLeftCell.Address
+        If Not images.Exists(shape.TopLeftCell.Address) Then
+            images.Add shape.TopLeftCell.Address, shape.Name
+        End If
+    Next
+    
+    Debug.Print IsCellContainPic(sourceRange, images)
+End Sub
+
+Private Function IsCellContainPic(cell As Range, images As Dictionary) As Boolean
+    If cell.Count = 1 Then
+        IsCellContainPic = images.Exists(cell.Address)
+    End If
+End Function
+```
