@@ -110,6 +110,16 @@ End Sub
     Next
     
 ```
+### Get Last Used Row
+```
+Private Function GetLastUsedRow(tbl As ListObject) As Integer
+    GetLastUsedRow = 2
+    If tbl.Range.Cells(GetLastUsedRow, 1).value <> "" Then
+        GetLastUsedRow = tbl.Range.Rows.Count + 1
+    End If
+End Function
+```
+
 ### Sort Table
 ```vba
 Sub Sort()
