@@ -111,7 +111,7 @@ End Sub
     
 ```
 ### Get Last Used Row
-```
+```vba
 Private Function GetLastUsedRow(tbl As ListObject) As Integer
     GetLastUsedRow = 2
     If tbl.Range.Cells(GetLastUsedRow, 1).value <> "" Then
