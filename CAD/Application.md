@@ -23,7 +23,7 @@ Sub test()
     addMtext.Height = Height
 End Sub
 ```
-### AutoCAD
+### ZWCAD
 ```vba
 Sub test()
     Dim cadApp As ZcadApplication
