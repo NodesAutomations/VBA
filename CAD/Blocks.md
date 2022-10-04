@@ -33,3 +33,4 @@ Sub test()
     Next
 End Sub
 ```
+Referance: [Get value block attributes from AutoCAD into excel with VBA](https://forums.autodesk.com/t5/vba/get-value-block-attributes-from-autocad-into-excel-with-vba/td-p/9446869)
