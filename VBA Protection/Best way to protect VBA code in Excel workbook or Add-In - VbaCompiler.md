@@ -1,7 +1,24 @@
 # Best way to protect VBA code in Excel workbook or Add-In - VbaCompiler
+Ref : https://vbacompiler.com/best-way-protect-vba-code/#unviewable-vba
 
-Created: October 5, 2022 9:50 PM
-URL: https://vbacompiler.com/best-way-protect-vba-code/#unviewable-vba
+### Overview
+In order to properly discuss the best way to protect VBA code, the “VBA code protection” term needs to be defined first, as well as the criteria of its efficiency.
+
+All software authors want to avoid a source code leak, especially if they want to monetize their work. Thus, it makes sense to treat the term ‘VBA code protection’ as protection from accessing the VBA source code and protection from VBA code algorithm restoration.
+
+To compare different VBA code protection methods, we need to have a measurement which directly shows the effectiveness of each method.
+
+The best measurement would be economical—how many resources were used to produce VBA code and what is the cost of the restoration of this code or algorithms from the secured code. An effective and reliable way to protect VBA code should have the cost of recovering VBA source code from protected code significantly higher than the cost of creating the same VBA code from scratch.
+
+It should become economically disadvantageous to recover VBA code in this case, because it is cheaper to create this VBA code from scratch than to recover it from the protected code.
+
+If W is defined as the work hours it took to create the VBA code and X as the amount of work hours to crack this protection to get access to the protected VBA code or restore the VBA code algorithms, then the relation between these quantities gives us the quality of VBA protection:
+
+X < W (or X/W < 1) –  means that cost of recovering source code is lower than developing the VBA code. This is low VBA code protection efficiency.
+
+X = W (or X/W = 1) – means that cost of the recovering the source code is comparable to the cost of developing the VBA code. This is moderate protection efficiency.
+
+X > W (or X/W > 1) – Cost of recovering the source code is higher than developing the VBA code. This is high protection efficiency.
 
 ![Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_password_protection.png](Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_password_protection.png)
 
