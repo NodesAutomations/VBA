@@ -1,7 +1,7 @@
 # Best way to protect VBA code in Excel workbook or Add-In - VbaCompiler
 Ref : https://vbacompiler.com/best-way-protect-vba-code
 
-### Overview
+## Overview
 In order to properly discuss the best way to protect VBA code, the “VBA code protection” term needs to be defined first, as well as the criteria of its efficiency.
 
 All software authors want to avoid a source code leak, especially if they want to monetize their work. Thus, it makes sense to treat the term ‘VBA code protection’ as protection from accessing the VBA source code and protection from VBA code algorithm restoration.
@@ -45,7 +45,7 @@ Source code obfuscation is defined as “the deliberate act of creating source o
 
 Obfuscation of VBA source code includes changing names of methods, variables, and constants to random, difficult to read names, as well as removing comments and VBA code indenting to reduce understanding of the code.
 
-![Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/obfuscated_vba_code.png](Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/obfuscated_vba_code.png)
+![image](https://user-images.githubusercontent.com/60865708/194114007-44f34294-436a-4473-ad39-2bc22eca58f3.png)
 
 In case of obfuscating, the structure of the algorithm is left unchanged and may be traced to recover the algorithms. There is existing software which allows to recover obfuscated VBA code formatting and increase the readability of the obfuscated source code. [https://rubberduckvba.com/](https://rubberduckvba.com/)
 
@@ -118,7 +118,7 @@ This means that the main drawback of the high cost of manual VBA to C/C++ conver
 
 With VbaCompiler for Excel you have the best VBA code protection efficiency without the high cost of VBA to C/C++ code conversion work.
 
-![Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vbacompiler_v1.6.png](Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vbacompiler_v1.6.png)
+![image](https://user-images.githubusercontent.com/60865708/194114133-36a23797-520d-4379-81e3-42b333f45a03.png)
 
 Beside the main VBA code protection feature – compilation into a DLL file the VbaCompiler for Excel provides more features to improve the VBA protection.
 
