@@ -1,5 +1,5 @@
 # Best way to protect VBA code in Excel workbook or Add-In - VbaCompiler
-Ref : https://vbacompiler.com/best-way-protect-vba-code/#unviewable-vba
+Ref : https://vbacompiler.com/best-way-protect-vba-code
 
 ### Overview
 In order to properly discuss the best way to protect VBA code, the “VBA code protection” term needs to be defined first, as well as the criteria of its efficiency.
@@ -20,15 +20,18 @@ X = W (or X/W = 1) – means that cost of the recovering the source code is comp
 
 X > W (or X/W > 1) – Cost of recovering the source code is higher than developing the VBA code. This is high protection efficiency.
 
-![Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_password_protection.png](Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_password_protection.png)
+![image](https://user-images.githubusercontent.com/60865708/194113691-87f9b2e7-2721-4fd1-a439-a91e7e32363d.png)
+
+ You may consider VBA password as protection from accidental changes to the VBA code by the customer. Anybody can find ways on how to remove VBA Project protection on the Internet.
+
+https://stackoverflow.com/questions/1026483/is-there-a-way-to-crack-the-password-on-an-excel-vba-project
 
 Also, many cheap commercial tools are available on the market to remove the VBA password. Recovering the VBA code access in this case is automated and its cost may be considered as equal to zero (X = 0).
 
-This method has **low protection efficiency**.
+This method has low protection efficiency.
 
 ## Unviewable VBA Project
-
-![Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_project_is_unviewable.png](Best%20way%20to%20protect%20VBA%20code%20in%20Excel%20workbook%20or%20%203a1bd166b3c547fd85e594f2f3bd7ad8/vba_project_is_unviewable.png)
+![image](https://user-images.githubusercontent.com/60865708/194113796-b97b6d8c-93d8-49ca-b239-7a5f77ba5d0a.png)
 
 There is a way to make VBA Project unviewable by altering several bytes of the Excel workbook or Excel Add-In file in a HEX-editor (or programmatically). After such changes, the Excel VBA Project shows the “Project unviewable” message and blocks access to the VBA source code. But you need to understand that **such restrictions exist only in the Microsoft VBA editor**. There are several software products which allow you to see the VBA source code of the unviewable VBA project. One such software is open source [LibreOffice package](https://www.libreoffice.org/download/download/).
 
