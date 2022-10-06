@@ -1,4 +1,5 @@
 https://superuser.com/questions/807926/how-to-bypass-the-vba-project-password-from-excel/808266#808266
+
 More things to try
 https://stackoverflow.com/questions/1026483/is-there-a-way-to-crack-the-password-on-an-excel-vba-project?noredirect=1&lq=1
 
