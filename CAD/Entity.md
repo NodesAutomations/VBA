@@ -1,5 +1,40 @@
 ### Loop Through Entity
+```vba
+Public Sub Test()
+    On Error GoTo ErrorHandler
+    
+    'Autocad Application
+    Dim cadApp As AutoCAD.AcadApplication
+    Set cadApp = GetObject(, "autocad.application")
+    
+    'Autocad Document
+    Dim cadDoc As AutoCAD.AcadDocument
+    Set cadDoc = cadApp.ActiveDocument
+    
+    'Autocad ModelSpace
+    Dim cadModel As AutoCAD.AcadModelSpace
+    Set cadModel = cadDoc.ModelSpace
+    
+    'Loop through each entity
+    Dim i As Integer
+    Dim entity As AutoCAD.AcadEntity
+    
+    For i = 0 To cadModel.Count - 1
+        Set entity = cadModel.Item(i)
+        Debug.Print entity.Name
+    Next
+    
+    
+Done:
+    Exit Sub
+ErrorHandler:
+    If Err.Description <> "" Then
+        MsgBox (Err.Description)
+    End If
+End Sub
 
+```
+### Loop Through Selected Items
 ```vba
 Sub Test()
     On Error GoTo ErrorHandler
