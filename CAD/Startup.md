@@ -7,5 +7,17 @@
 - First type `APPLOAD` command , it will open new windowd, on that windows there's group called startup suite, click on contents button there which will let you add dvb files for automatically load at startup
 - Refer : [Automatically load dvb file](http://www.lee-mac.com/autoloading.html)
 
-![image](https://user-images.githubusercontent.com/60865708/195874468-cd2c8365-895a-4e64-9158-d4c190036e91.png)
+![image](https://user-images.githubusercontent.com/60865708/195878362-73314a6b-c59d-4e30-b124-c14705228e98.png)
 
+### Using AutoLisp File
+
+Upon opening a drawing or starting a new drawing, AutoCAD will search all listed support paths including the working directory for a file with the filename: ACADDOC.lsp. If one or more such files are found, AutoCAD will proceed to load the first file found.
+
+With this knowledge one can edit or create an ACADDOC.lsp to include any AutoLISP expressions to be evaluated upon startup.
+
+Things get a little complicated should there exist more than one ACADDOC.lsp file, so, to check if such a file already exists, type or copy the following line to the AutoCAD command line:
+`
+(findfile "ACADDOC.lsp")
+`
+Should a filepath be returned, in the steps that follow, navigate to this file and amend its contents. Else, if the above line returns nil, you can create your own ACADDOC.lsp in Notepad or the VLIDE and save it in an AutoCAD Support Path.
+One clear advantage to using the ACADDOC.lsp to automatically load programs is that, upon migration, it may easily be copied from computer to computer, or indeed reside on a network to load programs on many computers simultaneously.
