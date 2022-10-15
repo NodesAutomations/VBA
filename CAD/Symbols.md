@@ -13,7 +13,7 @@
 ### Build Full Command to set Specific Layer 
 - Full command : `^C^C -LAYER;S;TEXT;;`
 - `^C^C` to cancel previous command
-- `-LAYER' to start layer command without UI
+- `-LAYER` to start layer command without UI
 - `;` to press enter, start layer command
 - `S;` to set layer
 - `TEXT;` name of layer then enter
