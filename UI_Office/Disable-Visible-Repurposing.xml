@@ -1,0 +1,48 @@
+
+<!-- This is example :  Disable-Visible-Repurposing.xlsm   -->
+
+
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">		
+
+<!-- *********************************************************************-->
+<!-- **********Disable and Repurposing controls on the ribbon*************-->
+<!-- *********************************************************************-->
+
+<commands>
+
+<!-- Disable Save As in the Backstage(File)menu in 2010-->
+    <command idMso="FileSaveAs" enabled = "false" />
+
+<!-- Example to disable the MergeCenterMenu on the Home tab in the Alignment group-->
+    <command idMso="MergeCenterMenu" enabled = "false" />
+
+<!-- Run your own macro when you click on a build in control-->
+<!-- When you click on Paste on the Home tab it will run the macro "MyPasteMacro"-->
+	<command idMso="Paste" onAction="MyPasteMacro"/>
+
+<!-- Disable Save As in the Backstage(File)menu in 2013-->
+      <command idMso="TabSave" enabled = "false" />  
+
+</commands>
+
+
+
+<!-- **************************************************************************-->
+<!-- **********Set visible to false for tabs or groups on the ribbon***********-->
+<!-- **************************************************************************-->
+
+<ribbon>		
+<tabs>		
+
+<!-- Set visible to false for the Font group on the Home tab-->
+	<tab idMso="TabHome"> 
+		<group idMso="GroupFont" visible="false"/>		
+	</tab>
+	
+<!-- Set visible to false for the whole Insert tab on the ribbon-->
+	<tab idMso="TabInsert" visible="false"/>	
+		
+</tabs>	
+</ribbon>	
+</customUI>
+

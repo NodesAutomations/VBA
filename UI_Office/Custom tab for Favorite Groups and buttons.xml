@@ -1,0 +1,39 @@
+
+<!-- This is example : Add custom tab for Favorite Groups and buttons   -->
+
+<!-- ****************************************************************************-->
+<!-- *You can find the Control/groups names in one of the downloads on this page*-->
+<!-- ***********http://www.rondebruin.nl/win/s2/win003.htm***********************-->
+<!-- ****************************************************************************-->
+
+
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+
+  <!-- Add Custom tab to the ribbon with your favorite built in groups/controls-->
+  <!-- The example add three complete groups to the new tab-->
+  <!-- And create a new group named "Favorite commands" on the new tab-->
+  <!-- In this group it add four built in controls-->
+
+  <ribbon>
+    <tabs>
+
+      <tab id="customTab" label="Favorite Groups" insertAfterMso="TabHome">
+
+        <group idMso="GroupClipboard" />
+        <group idMso="GroupSortFilter" />
+        <group idMso="GroupInsertIllustrations" />
+
+        <group id="YouCustomGroup" label="Favorite commands">
+          <button idMso="VisualBasic" />
+          <button idMso="SheetProtect" />
+          <button idMso="ConvertTextToTable" />
+	  <separator id="MySeparator1" />
+          <menu idMso="WindowSwitchWindowsMenuExcel" size="large" />				
+        </group>
+
+      </tab>
+
+    </tabs>
+  </ribbon>
+
+</customUI>

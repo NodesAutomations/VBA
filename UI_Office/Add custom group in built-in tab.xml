@@ -1,0 +1,33 @@
+
+<!-- This is example :  Add custom group in built-in tab   -->
+
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+
+  <!-- Add Custom group to the Home tab in the ribbon-->
+  <!-- The example add three buttons to the group and a menu button with 5 options-->
+
+  <ribbon>
+    <tabs>
+
+      <tab idMso="TabHome" >
+        <group id="customGroup1" label="Group 1" insertAfterMso="GroupEditingExcel" >
+          <button id="customButton1" label="Caption 1" size="normal" onAction="Macro1" imageMso="DirectRepliesTo" />
+          <button id="customButton2" label="Caption 2" size="normal" onAction="Macro2" imageMso="AccountMenu" />
+          <button id="customButton3" label="Caption 3" size="normal" onAction="Macro3" imageMso="RegionLayoutMenu" />
+
+	  <separator id="MySeparator1" />
+
+          <menu id="MyDropdownMenu" label="My Menu" size="large" imageMso="TextAlignGallery"  >
+            <button id="customButton4" label="Caption 4"  onAction="Macro4" imageMso="TextAlignGallery" />
+            <button id="customButton5" label="Caption 5"  onAction="Macro5" imageMso="TextAlignGallery" />
+            <button id="customButton6" label="Caption 6"  onAction="Macro6" imageMso="TextAlignGallery" />
+            <button id="customButton7" label="Caption 7"  onAction="Macro7" imageMso="TextAlignGallery" />
+            <button id="customButton8" label="Caption 8"  onAction="Macro8" imageMso="TextAlignGallery" />
+          </menu>
+        </group>
+      </tab>
+
+    </tabs>
+  </ribbon>
+
+</customUI>
