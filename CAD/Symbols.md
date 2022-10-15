@@ -18,6 +18,7 @@
 - `S;` to set layer
 - `TEXT;` name of layer then enter
 - `;` Last enter to finish Command
+- You can keep going as long as you want, you don't need to use hyphen again for next command
 
 ### Run VBA Module
 `
