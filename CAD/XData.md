@@ -16,3 +16,18 @@ Hey this is just a sample to see if this works with github or not
 
 - this looks really fun
 - and this works
+
+### Title
+
+Hey this is just a sample to see if this works with github or not
+
+### Title2
+
+- this looks really fun
+- and this works
+
+```vbnet
+Sub Test()
+'This is just a sample code
+End Sub
+```
