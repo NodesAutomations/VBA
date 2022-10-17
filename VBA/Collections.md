@@ -54,3 +54,6 @@ Sub UserCollection()
 
 End Sub
 ```
+
+### Additional References
+- [The Ultimate Guide To Collections in Excel VBA - Excel Macro Mastery](https://excelmacromastery.com/excel-vba-collections/)
