@@ -26,6 +26,11 @@ One clear advantage to using the ACADDOC.lsp to automatically load programs is t
 ```lisp
 (defun c:Test() (command "vbarun" "Blocks.ExplodeBlocks"))
 ```
+### Code to Automatically Load project.dvb file at AutoCAD Startup
+```lisp
+(defun s::startup()(command "-vbaload" "C:\Users\Ryzen2600x\source\repos\Upwork_Marco_ExplodeBlocks\Project.dvb"))
+```
+
 
 ![image](https://user-images.githubusercontent.com/60865708/195880462-858884f9-894e-4bc1-8972-531f1bead006.png)
 
