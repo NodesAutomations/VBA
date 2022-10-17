@@ -5,7 +5,6 @@
 - Now If you want to use this macro on any drawing you have to manually load this dvb file everytime you open autocad
 - But you can set it up to run it automatically
 - First type `APPLOAD` command , it will open new windowd, on that windows there's group called startup suite, click on contents button there which will let you add dvb files for automatically load at startup
-- Refer : [Automatically load dvb file](http://www.lee-mac.com/autoloading.html)
 
 ![image](https://user-images.githubusercontent.com/60865708/195878362-73314a6b-c59d-4e30-b124-c14705228e98.png)
 
@@ -36,3 +35,6 @@ One clear advantage to using the ACADDOC.lsp to automatically load programs is t
 
 ![image](https://user-images.githubusercontent.com/60865708/195880839-a8c76d20-735e-4988-9848-41c37b587cf0.png)
 
+## References
+- [Automatically load dvb file](http://www.lee-mac.com/autoloading.html)
+- [Turn your VBA macro's into commands](https://www.youtube.com/watch?v=iQLRy9lFwfI)
