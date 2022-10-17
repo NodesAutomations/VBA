@@ -22,6 +22,11 @@ Things get a little complicated should there exist more than one ACADDOC.lsp fil
 Should a filepath be returned, in the steps that follow, navigate to this file and amend its contents. Else, if the above line returns nil, you can create your own ACADDOC.lsp in Notepad or the VLIDE and save it in an AutoCAD Support Path.
 One clear advantage to using the ACADDOC.lsp to automatically load programs is that, upon migration, it may easily be copied from computer to computer, or indeed reside on a network to load programs on many computers simultaneously.
 
+### Code to Assign Command for Project.dvb in AutoCAD Support Folder
+```lisp
+(defun c:Test() (command "vbarun" "Blocks.ExplodeBlocks"))
+```
+
 ![image](https://user-images.githubusercontent.com/60865708/195880462-858884f9-894e-4bc1-8972-531f1bead006.png)
 
 ![image](https://user-images.githubusercontent.com/60865708/195880839-a8c76d20-735e-4988-9848-41c37b587cf0.png)
