@@ -52,3 +52,5 @@ Public Sub Test()
     Next i
 End Sub
 ```
+References
+- [How to use Early and Late Binding the right way! - YouTube](https://www.youtube.com/watch?v=W0FlKKpZXgw)****
