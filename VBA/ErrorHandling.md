@@ -57,6 +57,11 @@ End Sub
 ```
 Err.Raise [error number], [error source], [error description]
 ```
+**When we create an error using *Err.Raise* we need to give it a number. We can use any number from 513 to 65535 for our error. We must use *vbObjectError* with the number e.g.**
+
+```
+Err.Raise vbObjectError + 513
+```
 ```vba
 Public Const ERROR_INVALID_DATA As Long = vbObjectError + 513
 
