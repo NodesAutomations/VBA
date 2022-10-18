@@ -50,6 +50,13 @@ End Sub
     - ![image](https://user-images.githubusercontent.com/60865708/126891604-761278ce-d913-4647-906d-5ad3d58965dd.png)
 
 ### Raise New Error
+**Err.Raise allows us to create errors. We can use it to create custom errors for our application which is very useful. It is the equivalent of the Throw statement in Java\C#.**
+
+**The format is as follows**
+
+```
+Err.Raise [error number], [error source], [error description]
+```
 ```vba
 Public Const ERROR_INVALID_DATA As Long = vbObjectError + 513
 
