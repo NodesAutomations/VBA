@@ -53,4 +53,5 @@ Public Sub Test()
 End Sub
 ```
 References
-- [How to use Early and Late Binding the right way! - YouTube](https://www.youtube.com/watch?v=W0FlKKpZXgw)****
+- [How to use Early and Late Binding the right way! - YouTube](https://www.youtube.com/watch?v=W0FlKKpZXgw)
+
