@@ -1,10 +1,9 @@
 Also add EarlyBinding =1 or 0 into your VBA project Property conditional Compilation
-
-
-
+![image](https://user-images.githubusercontent.com/60865708/196372852-4da94d37-f535-4d96-9b40-2f75290620ba.png)
+ 
 ### Step 1 : Create Class with If Else Block
 
-```visual-basic
+```vba
 Option Explicit
 
 #If EarlyBinding = 1 Then
@@ -35,7 +34,7 @@ End Property
 
 ### Step2 : Implement Class in to your Module
 
-```visual-basic
+```vba
 Public Sub Test()
     Dim dict As New clsDict
     dict.myDictionary.Add "Vivek", 100
