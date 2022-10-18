@@ -40,6 +40,7 @@ Sub Test()
     Dim i As Long
     For i = 0 To dict.Count - 1
         Debug.Print dict.Keys(i), dict.Items(i)
+        'use dict.Keys()(i) for compatibility with late binding
     Next i
  
 End Sub
