@@ -7,3 +7,5 @@ Up until this research, the change to make a VBA Project locked/unviewable was s
 Above are values that will undo the protection, but because the MS Office Compound File Binary Format (CFBF) is sensitive to data length changes, your best bet is to let [EvilClippy](https://github.com/outflanknl/EvilClippy) make these changes for you.
 
 Bonus: The EvilCippy ‘-uu’ option also removes any password protection from the VBA Project.
+
+Ref : [VBA Project Locked; Project is Unviewable | by Carrie Roberts | Walmart Global Tech Blog | Medium](https://medium.com/walmartglobaltech/vba-project-locked-project-is-unviewable-4d6a0b2e7cac)
