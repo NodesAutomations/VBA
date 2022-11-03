@@ -1,6 +1,6 @@
 ### Get Reaction from STAAD
 
-```visual-basic
+```vba
 Sub Reaction()
 Dim objOpenSTAAD As Object
 Dim lNodeNo As Long
