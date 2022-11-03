@@ -27,3 +27,43 @@ Private Sub ReadChatData()
     Debug.Print , chatData
 End Sub
 ```
+### Write Text file
+```vba
+# Read-Write Text File
+
+### Read
+
+```visual-basic
+Option Explicit
+
+Private Sub CommandButton1_Click()
+
+Dim myFile As String, text As String, textline As String, posLat As Integer, posLong As Integer
+myFile = "C:\test\data.txt"
+'myFile = Application.GetOpenFilename()
+Dim x As Double
+Open myFile For Input As #1
+        Line Input #1, textline
+        posLat = CInt(textline)
+       Line Input #1, textline
+       posLong = CInt(textline)
+        Line Input #1, textline
+       x = CDbl(textline)
+   Close #1
+
+Range("A1").Value = posLat
+Range("A2").Value = x
+
+End Sub
+```
+
+### Write
+
+```vba
+Dim out As String
+out = "D:\Documents\Excel sheets\VBA\output.txt"
+Open out For Output As #1
+'Add your Print code Here
+Print #1,""
+Close #1
+```
