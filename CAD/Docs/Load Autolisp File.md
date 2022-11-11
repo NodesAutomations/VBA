@@ -1,8 +1,9 @@
 ### Steps to Load Auto lisp File
+- This Proces is same for AutoCAD and ZWCAD only change in UI
+- Just use Appload Command to load autolisp 
+- use related command name to trigger command, in case of below script use `cut`
 
-
-
-
+### Sample Lisp file
 ```lisp
 (defun c:cut(/ p1 p2 p3 p4 pt1 pt2)
 (if (not def) (setq def 10.0))
