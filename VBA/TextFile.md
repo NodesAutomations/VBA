@@ -37,3 +37,23 @@ Open out For Output As #1
 Print #1,""
 Close #1
 ```
+### Write File using File System Object
+```vba
+
+Sub test()
+Dim fso As New FileSystemObject
+
+Dim fileStream As TextStream
+Set fileStream = fso.CreateTextFile("C:\Users\Ryzen2600x\source\repos\Nodes_Stellar_BoxCulvert\STAAD\Basic2.std")
+fileStream.WriteLine "Hello"
+fileStream.WriteLine "My Name is Vivek"
+
+fileStream.WriteBlankLines (2)
+fileStream.Write "Sign"
+fileStream.Write ":VivekPatel"
+
+
+
+fileStream.Close
+End Sub
+```
