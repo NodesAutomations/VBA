@@ -52,8 +52,6 @@ fileStream.WriteBlankLines (2)
 fileStream.Write "Sign"
 fileStream.Write ":VivekPatel"
 
-
-
 fileStream.Close
 End Sub
 ```
