@@ -1,0 +1,33 @@
+﻿
+Private Sub Size_X_Change()
+    Range("C20") = Size_X.Value / 10
+End Sub
+Private Sub Size_Y_Change()
+    Range("C23") = Size_Y.Value / 10
+End Sub
+
+Private Sub Shift_X_Change()
+    Range("L3") = Shift_X.Value / 10
+End Sub
+
+Private Sub Shift_Y_Change()
+    Range("L6") = Shift_Y.Value / 10
+End Sub
+
+Private Sub Rot_simple_Change()
+    If Rot_simple > 71 Then Rot_simple = 0
+    If Rot_simple < 0 Then Rot_simple = 71
+    Range("L20") = 5 * Rot_simple.Value
+End Sub
+
+Private Sub Rot_own_Change()
+    If Rot_own > 71 Then Rot_own = 0
+    If Rot_own < 0 Then Rot_own = 71
+    Range("U3") = 5 * Rot_own.Value
+End Sub
+
+Private Sub Rot_whole_Change()
+    If Rot_whole > 71 Then Rot_whole = 0
+    If Rot_whole < 0 Then Rot_whole = 71
+    Range("U20") = 5 * Rot_whole.Value
+End Sub
