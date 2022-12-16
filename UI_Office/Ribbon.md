@@ -80,3 +80,20 @@ Apostrophe - ' [& apos;]
 |visible	|Specifies whether the control is visible or not.|
 
 
+### Custom Ribbon Icons
+### Icons Format
+
+- use png icons
+- use 24 size for larger icons
+- use 16 size for smaller icons
+
+### Steps for new icons
+
+- download icons from any of your favourite sites, but make sure to use minimal icons
+- Use [https://convertio.co/image-converter/](https://convertio.co/image-converter/) to convert png file to svg file
+- Use [https://www.iconfinder.com/editor/](https://www.iconfinder.com/editor/) to change colors or do minor editing
+
+### Color Codes
+
+- use white FFFFFF for Main Color
+- Use Red ff3f3f for Secondary color
