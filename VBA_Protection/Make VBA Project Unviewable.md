@@ -27,6 +27,33 @@ After, simply replace the old "vbaProject.bin" inside the \xl\ folder and change
 
 While it isn't foolproof, this is a way to prevent those who are amateur and intermediate users access to the code inside your Excel file, and will allow you to know that your clients will not be able to easily change your code or view it under normal circumstances. It will allow you to breath easy knowing that they will not modify any code that you did not originally want modified unless they're an adept computer user.
 
-Thanks for reading my first article, and if you enjoyed the read and are not already a part of my network, feel free to send a connection my way, as I am always looking to learn and I will release more articles geared around Microsoft's products in the future.
+ 
+# Excel Lock vba project from viewing****
+### Goals
 
+- Make VBA Code Unreadable for End Users
 
+### Steps
+
+- Convert Excel file to zip
+- Open zip and find zip/xl/vbaProject.bin file
+- Open That bin file
+- Find CMG and DPG and GC Values and Replace with 1 + Add Additional 1
+- New Key Length= Old Key Length +1
+- Save and convert back to original excel file
+
+### Before
+
+```jsx
+CMG="64666CA8F4P"
+DPB="2A2822F6E9F7E9F7E9"
+GC="F0F2F8FBF9FBF904"
+```
+
+### After
+
+```jsx
+CMG="11111111111"
+DPB="1111111111111111111"
+GC="11111111111111111"
+```
