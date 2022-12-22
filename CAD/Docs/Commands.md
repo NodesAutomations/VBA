@@ -1,0 +1,12 @@
+### VBA Commands
+- vbaide
+  - To Check if VBA is Installed
+- vbanew
+  - To Create New VBA Project
+- vbaload
+  - Manually Loading VBA Project
+- vbarun
+  - Run VBA Project
+  - vbarun for command line
+  - Vl-vbarun for autolisp
+  - The name of the macro to execute with the -vbarun command or vl-vbarun function must be in the following format: DVBFilename.ProjectName!MacroNam
