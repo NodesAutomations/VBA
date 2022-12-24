@@ -15,3 +15,6 @@
 - You can create CUI file Using AutoCAD CUI Editor
 - You can keep CUI File whereever you like, You have to load it only once usign `CUILOAD` command and it will get automatically loaded whever you'll open new autoCAD
 - to create new CUI file refer this [doc](https://github.com/NodesAutomations/VBA/blob/master/UI_AutoCAD/Custom%20Palettes.md)
+
+### Project Refernce
+- [Explode Blocks](https://github.com/NodesAutomations/Upwork_Marco_ExplodeBlocks/releases/tag/v0.1.0)
