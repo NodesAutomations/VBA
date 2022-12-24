@@ -17,4 +17,4 @@
 - to create new CUI file refer this [doc](https://github.com/NodesAutomations/VBA/blob/master/UI_AutoCAD/Custom%20Palettes.md)
 
 ### Project Refernce
-- [Explode Blocks](https://github.com/NodesAutomations/Upwork_Marco_ExplodeBlocks/releases/tag/v0.1.0)
+- [Upwork_Marco_ExplodeBlocks](https://github.com/NodesAutomations/Upwork_Marco_ExplodeBlocks/releases/tag/v0.1.0)
