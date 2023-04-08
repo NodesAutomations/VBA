@@ -57,4 +57,4 @@ Public Sub dyn_prop(objBlock As AcadBlockReference, name_of_property As String, 
 
 End Sub
 ```
- 
+Reference :[Get and Set Dynamic Blocks](https://forums.autodesk.com/t5/vba/get-and-set-dynamic-block-property/td-p/2977862)
