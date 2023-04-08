@@ -34,3 +34,27 @@ Sub test()
     Next
 End Sub
 ```
+
+### Generalize Method to update dynamic property of block reference
+```vba
+  Set cadBlockRef = cadEntity
+  Call dyn_prop(cadBlockRef, "Distance1", 1500)
+```
+```vba
+Public Sub dyn_prop(objBlock As AcadBlockReference, name_of_property As String, value_of_property As Double)
+    Dim i As Integer
+    Dim dyn_properties() As AcadDynamicBlockReferenceProperty
+    Dim var_atts As Variant
+
+    var_atts = objBlock.GetDynamicBlockProperties
+
+    For i = LBound(var_atts) To UBound(var_atts)
+        If var_atts(i).PropertyName = name_of_property Then
+            var_atts(i).Value = value_of_property
+            ' ThisDrawing.SendCommand "_regen" & vbCr
+        End If
+    Next
+
+End Sub
+```
+ 
