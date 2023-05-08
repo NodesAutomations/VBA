@@ -1,0 +1,11 @@
+### Add button to ribbon
+- Open the item window for which you’d like to add the macro button to.
+- Right-click on any part of the Ribbon and choose Customize the Ribbon.
+- In the Choose commands from list, click Macros.
+- Select the macro you want to assign a button to.
+- In the right pane, select a tab where you want to add your button, or create a new tab by clicking New Tab.
+- Under the selected tab, click New Group to create a new group for your button.
+- Click Add to move the macro to the new group on the selected tab.
+- To rename your tab, group, or button, click Rename and enter a new name or choose an icon from the list.
+- Click OK to close the dialog and return to your item window.
+- ![image](https://user-images.githubusercontent.com/60865708/236826888-d2b25b0f-e5fe-421a-b3fd-59f7dcd30f33.png)
