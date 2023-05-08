@@ -8,4 +8,13 @@
 - Click Add to move the macro to the new group on the selected tab.
 - To rename your tab, group, or button, click Rename and enter a new name or choose an icon from the list.
 - Click OK to close the dialog and return to your item window.
-- ![image](https://user-images.githubusercontent.com/60865708/236826888-d2b25b0f-e5fe-421a-b3fd-59f7dcd30f33.png)
+![image](https://user-images.githubusercontent.com/60865708/236826888-d2b25b0f-e5fe-421a-b3fd-59f7dcd30f33.png)
+
+### Add button to quick access toolbar
+- Open the item window for which you’d like to add the macro button to.
+- Click File > Options > Quick Access Toolbar.
+- In the Choose commands from list, click Macros.
+- Select the macro you want to assign a button to.
+- Click Add to move the macro to the list of buttons on the Quick Access Toolbar.
+- To replace the default macro icon with a different button for your macro, click Modify and choose an icon from the list.
+- Click OK to close the dialog and return to your item window.
