@@ -1,11 +1,11 @@
 ### Using Environ function
-```
+```vba
 environ("Path") 
 ```
 
 
 ### Using CMD
-```
+```vba
 Sub RunCMD()
     Dim wsh As Object
     Set wsh = VBA.CreateObject("WScript.Shell")
