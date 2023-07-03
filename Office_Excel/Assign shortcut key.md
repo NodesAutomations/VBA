@@ -11,3 +11,4 @@ Application.MacroOptions macro:="MyProgram", Description:="Description of the Ma
 hasshortcutkey:=True, ShortcutKey:="^b"
 ```
 - ref : https://vmlogger.com/excel/2013/06/assign-a-shortcut-key-using-excel-vba/
+- ref : https://learn.microsoft.com/en-us/office/vba/api/excel.application.onkey
