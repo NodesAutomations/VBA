@@ -1,8 +1,8 @@
 ### Create Excel sheet to install addin
 - create `install.xlsm` with module containing below code
 - you can create button to run this or add workbook_open event
-```
-
+- 
+```vba
 Sub Install()
 
     Dim mypath As String, strfile As String, fileName As String
