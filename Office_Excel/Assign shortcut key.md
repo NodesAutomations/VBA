@@ -14,7 +14,7 @@ hasshortcutkey:=True, ShortcutKey:="^b"
 - ref : https://learn.microsoft.com/en-us/office/vba/api/excel.application.onkey
 
 ### for numpad keys
-```
+```vba
 Sub ReAssignKeypad()
 Application.OnKey "{096}", "KeyPad0"
 Application.OnKey "{097}", "KeyPad1"
