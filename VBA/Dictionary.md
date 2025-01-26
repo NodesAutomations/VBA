@@ -89,4 +89,9 @@ Sub Test()
     Next i
 End Sub
 ```
-
+### Dictionary with Array
+```vb
+    Dim dict   As Object
+    Set dict = CreateObject("scripting.dictionary")
+    dict.Add 16, Array(11, 22, 33)
+```
