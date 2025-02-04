@@ -2,6 +2,7 @@
 - Remove OnLoad Event if you're making addin and don't want to activate your custom ribbon onload
 - You need name of control to add button or group
 - You can find Ribbon Control Id from Customize Ribbon Menu, Id name are written in round brackets
+- In Below Screenshot, `BordersGallery` is inbuilt control
 
 ![RibbonControlID](/UI_Office/RibbonControlD.png)
 
@@ -19,48 +20,15 @@
     </ribbon>
 </customUI>
 ```
-### Add Custom Icon
-- Add Icon PNG files 64px
-
-## Xml Template 
-### Custom Tab
+### Tab and Group
 ```xml
-<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> 
-   <ribbon> 
-     <tabs> 
-        <tab id="CustomTab" label="TrainingAutomation" keytip="M"> 
-         <group id="SampleGroup" label="Formatting"> 
-           <button id="SplitButton" label="&amp;Split" image="Splitter" size="large" onAction="SplitShape" /> 
-           <button id="MergeButton" label="&amp;Merge" image="Merge" size="large" onAction="MergeShape" /> 
-         </group > 
-       </tab> 
-     </tabs> 
-   </ribbon> 
- </customUI>
+<tab id="CustomTab" label="TrainingAutomation" keytip="M"> 
+  <group id="SampleGroup" label="Formatting"> 
+     <!--Add your button code here  -->
+  </group> 
+</tab> 
 ```
-### Open Custom Ribbon On workbook Load
-```xml
-<customUI onLoad="RibbonOnLoad" xmlns="http://schemas.microsoft.com/office/2009/07/customui"> 
-   <ribbon> 
-     <tabs> 
-        <tab id="CustomTab" label="Shoeb Lakhi" keytip="S"> 
-         <group id="SampleGroup" label="DataBase"> 
-           <button id="SyncButton" label="&amp;Sync" imageMso="SynchronizeHtml" size="large" onAction="SyncData" />           
-         </group > 
-       </tab> 
-     </tabs> 
-   </ribbon> 
- </customUI>
-```
-Add This To VBA Module
-```vba
-Public Sub RibbonOnLoad(ribbon As IRibbonUI)
-    Dim ribRibbon As IRibbonUI
-    Set ribRibbon = ribbon
-    ribRibbon.ActivateTab ("CustomTab")
-End Sub
-```
-Special Symbols
+### Special Symbols for labels
 ```
 Ampersand - & [& #38;]
 Forward Slash - / [& #47;]
@@ -68,15 +36,22 @@ Backward Slash - \ [& #92;]
 New Line - [& #13;]
 Apostrophe - ' [& apos;]
 ```
+### Simple Button
+```xml
+   <button id="AboutButton" label="About" imageMso="InformationDialog" size="large" onAction="AboutButton_Click" getScreentip="AboutButton_Tip" />
+```
+### Simple Button with custom Icon
+- use png icons
+- use 24 size for larger icons
+- use 16 size for smaller icons
+- Use white `#FFFFFF` for Main Color
+- Use Red `ff3f3f` for Secondary color
+  
+### Split Button
 
 
-## Attribute Referance
-- Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
-- [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
-- [Microsoft Doc](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ee691833(v=office.14)?redirectedfrom=MSDN)
 
-## Image Gallary
-- [Bert Image Gallary](https://bert-toolkit.com/imagemso-list.html)
+
 
 ### Tags
 | Tag             | Detail                                                                                           |
@@ -99,20 +74,7 @@ Apostrophe - ' [& apos;]
 | visible         | Specifies whether the control is visible or not.                                                 |
 
 
-### Custom Ribbon Icons
-### Icons Format
-
-- use png icons
-- use 24 size for larger icons
-- use 16 size for smaller icons
-
-### Steps for new icons
-
-- download icons from any of your favourite sites, but make sure to use minimal icons
-- Use [https://convertio.co/image-converter/](https://convertio.co/image-converter/) to convert png file to svg file
-- Use [https://www.iconfinder.com/editor/](https://www.iconfinder.com/editor/) to change colors or do minor editing
-
-### Color Codes
-
-- use white FFFFFF for Main Color
-- Use Red ff3f3f for Secondary color
+## Attribute Referance
+- Taken From [Ribbon Attributes](https://bettersolutions.com/vba/ribbon/tab.htm)
+- [Github Repo:Office Identifiers](https://github.com/OfficeDev/office-fluent-ui-command-identifiers)
+- [Microsoft Doc](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ee691833(v=office.14)?redirectedfrom=MSDN)
