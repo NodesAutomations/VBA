@@ -1,0 +1,5 @@
+del /q "*.bas"
+del /q "*.cls"
+del /q "*.doccls"
+del /q "*.frm"
+del /q "*.frx"
