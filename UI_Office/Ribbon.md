@@ -46,12 +46,28 @@ Apostrophe - ' [& apos;]
 - use 16 size for smaller icons
 - Use white `#FFFFFF` for Main Color
 - Use Red `ff3f3f` for Secondary color
-  
+
+### Menu Button
+```xml
+  <menu id="SlideSlizeMenu" label="Slide&#13;Size" size="large" imageMso="PowerPointPageSetup">
+    <button id="CustomSlideSlizeButton" label="Custom" onAction="CustomSlideSlizeButton_Click" getScreentip="SlideSlizeButton_Tip" imageMso="PowerPointPageSetup" />
+    <button id="ChirpySlideSlizeButton" label="1443 x 755" onAction="ChirpySlideSlizeButton_Click" getScreentip="ChirpySlideSlizeButton_Tip" imageMso="PowerPointPageSetup" />
+    <button id="FHDSlideSlizeButton" label="1920 x 1080" onAction="FHDSlideSlizeButton_Click" getScreentip="FHDSlideSlizeButton_Tip" imageMso="PowerPointPageSetup" />
+    <button id="QHDSlideSlizeButton" label="2560 x 1440" onAction="QHDSlideSlizeButton_Click" getScreentip="QHDSlideSlizeButton_Tip" imageMso="PowerPointPageSetup" />
+  </menu>
+```
+
 ### Split Button
-
-
-
-
+```xml
+```xml
+<splitButton id="SlidesPNGSplitButton" size="large">
+  <button id="ActiveSlidePNGButton2" label="Slide&#13;PNG" onAction="ActiveSlidePNGButton2_Click" getScreentip="ActiveSlidePNGButton2_Tip" imageMso="TableBackgroundPictureFill" />
+  <menu id="SlidesPNGMenu" itemSize="large">
+    <button id="ActiveSlidePNGButton" label="Active Slide" onAction="ActiveSlidePNGButton_Click" getScreentip="ActiveSlidePNGButton_Tip" imageMso="TableBackgroundPictureFill"/>
+    <button id="AllSlidePNGButton" label="All Slide" onAction="AllSlidePNGButton_Click" getScreentip="AllSlidePNGButton_Tip" imageMso="TableBackgroundPictureFill" />
+  </menu>
+</splitButton>
+```
 
 ### Tags
 | Tag             | Detail                                                                                           |
