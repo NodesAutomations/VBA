@@ -42,10 +42,17 @@ Apostrophe - ' [& apos;]
 ```
 ### Simple Button with custom Icon
 - use png icons
-- use 24 size for larger icons
+- use 32 size for larger icons
 - use 16 size for smaller icons
 - Use white `#FFFFFF` for Main Color
 - Use Red `ff3f3f` for Secondary color
+
+```xml
+<group id="SampleGroup" label="Formatting">
+    <button id="Test32Button" label="32" size="large" image="Home_32" />
+    <button id="Test64Button" label="64" size="large" image="Home_64" />
+</group>
+```
 
 ### Menu Button
 ```xml
