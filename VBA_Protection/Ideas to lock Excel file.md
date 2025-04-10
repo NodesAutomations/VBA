@@ -1,0 +1,21 @@
+## Option to Lock excel file
+
+- Restrict All File access to computers, this is common in large enterprises
+    - Block all USB ports for pendrives/hard disks
+    - Block all outgoing traffic via the internet, especially emails
+    - Add some kind of encryption for the hard drive, as anyone with basic computer knowledge can just remove the hard drive from the PC
+    - This is also applicable to laptops provided by the company
+- Use of shared network with limited permissions
+    - You can use a local server or SharePoint
+    - This won’t protect if users save the file to another location
+- Using VBA for basic security
+    - Add VBA code to prevent the "Save As" action on a specific file
+    - Write basic VBA code to check the computer ID or something else to ensure the file is on a company computer
+    - Downside: VBA security is not foolproof; anyone with good computer skills can remove the VBA code
+- Use web-only options
+    - Use the online version of Excel if it doesn’t contain any code. The online version has options to share without permission to download the file. Google Sheets is also a good alternative
+    - If it’s really important, convert the calculation into a web application. Streamlit is a good option for this. It requires minimal code and is free to use
+- Compile Excel to an EXE file
+    - There are multiple tools to compile an Excel file to an EXE file, which converts all VBA code to C++ and adds additional security, such as generating a license key for a specific computer
+    - Problem: This is a kind of hack, not an official solution, so there’s no guarantee that your Excel sheet will perform normally. Some software tools are hit or miss
+    - Software examples: Done Ex, Excel Padlock, Unviewable
