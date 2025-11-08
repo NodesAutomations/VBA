@@ -11,6 +11,32 @@ edit_uri: edit/main/docs/
 nav:
   - Home:
     - index.md
+  - Code:
+    - Code/AccessModifiers.md
+    - Code/Array.md
+    - Code/Class.md
+    - Code/Collections.md
+    - Code/Colors.md
+    - Code/ConditinalStatements.md
+    - Code/Debugging.md
+    - Code/Dictionary.md
+    - Code/Enum.md
+    - Code/Environment variables.md
+    - Code/ErrorHandling.md
+    - Code/FileSystem.md
+    - Code/Loops.md
+    - Code/Math.md
+    - Code/MessageBox.md
+    - Code/Resources.md
+    - Code/Sound.md
+    - Code/String.md
+    - Code/Switch between Early and Late binding.md
+    - Code/TextFile.md
+    - Code/Time.md
+    - Code/VBA Password.md
+    - Code/WindowsAPI.md
+    - Code/XML.md
+    - Code/ZipFiles.md
 
 # Theme
 theme:
@@ -62,16 +88,6 @@ markdown_extensions:
   - def_list # List extensions
   - pymdownx.tasklist: # List extensions
       custom_checkbox: true
-
-# Extra JavaScript for KaTeX
-extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-
-# Extra CSS for KaTeX
-extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
 
 # Copyright
 copyright: Copyright &copy; 2025 Nodes Automations
