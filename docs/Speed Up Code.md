@@ -1,3 +1,16 @@
+## Speed Toggle
+```vba
+Public Sub SpeedMode(ByVal Toggle As Boolean)
+    Application.ScreenUpdating = Not Toggle
+    Application.EnableEvents = Not Toggle
+    Application.DisplayAlerts = Not Toggle
+    Application.EnableAnimations = Not Toggle
+    Application.DisplayStatusBar = Not Toggle
+    Application.PrintCommunication = Not Toggle
+    Application.Calculation = IIf(Toggle, xlCalculationManual, xlCalculationAutomatic)
+End Sub
+```
+
 To achieve the best VBA code performance after compilation with [DoneEx VbaCompiler for Excel](https://vbacompiler.com/), we recommend to apply all of the following tips to optimize VBA code performance before compilation.
 
 ## 1. Turn off “Automatic Calculation” mode and enable “Manual Calculation” mode

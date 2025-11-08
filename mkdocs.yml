@@ -11,6 +11,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home:
     - index.md
+    - Speed Up Code.md
   - Code:
     - Code/AccessModifiers.md
     - Code/Array.md
