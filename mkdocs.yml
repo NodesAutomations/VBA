@@ -38,6 +38,45 @@ nav:
     - Code/WindowsAPI.md
     - Code/XML.md
     - Code/ZipFiles.md
+  - Excel:
+    - Excel/AdvanceFilter.md
+    - Excel/Application.md
+    - Excel/Assign shortcut key.md
+    - Excel/Automatically install addin.md
+    - Excel/DocumentProperties.md
+    - Excel/Events.md
+    - Excel/FileExplorer.md
+    - Excel/Formulas.md
+    - Excel/Image.md
+    - Excel/Images.md
+    - Excel/Points.md
+    - Excel/Range.md
+    - Excel/Resources.md
+    - Excel/Sheet.md
+    - Excel/SpeedUp.md
+    - Excel/Table.md
+    - Excel/UserDefineFunctions.md
+  - Outlook:
+    - Outlook/Create button for macro.md
+  - PowerPoint:
+    - PowerPoint/Addin.md
+    - PowerPoint/Application.md
+    - PowerPoint/colors.md
+    - PowerPoint/Images.md
+    - PowerPoint/References.md
+    - PowerPoint/Section.md
+    - PowerPoint/Selection.md
+    - PowerPoint/Shape.md
+    - PowerPoint/Shapes.md
+    - PowerPoint/Slide.md
+    - PowerPoint/Table.md
+  - Word:
+    - Word/Bookmark.md
+    - Word/Find and Replace.md
+    - Word/FindReplace.md
+    - Word/Resources.md
+    - Word/Sections.md
+    - Word/Table.md
 
 # Theme
 theme:
