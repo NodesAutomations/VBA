@@ -11,7 +11,16 @@ edit_uri: edit/main/docs/
 nav:
   - Home:
     - index.md
+    - Ribbon.md
     - Speed Up Code.md
+    - crack the password on an Excel VBA Project.md
+    - Ideas to lock Excel file.md
+    - Make VBA Project Unviewable.md
+    - Password Breaker Code.md
+    - Protect VBA code in Excel.md
+    - Remove Password.md
+    - Tools.md
+    - Unlock VBA password.md
   - Code:
     - Code/AccessModifiers.md
     - Code/Array.md
@@ -77,6 +86,21 @@ nav:
     - Word/Resources.md
     - Word/Sections.md
     - Word/Table.md
+  - AutoCAD:
+    - AutoCAD/Blocks.md
+    - AutoCAD/Blocks_Dynamic.md
+    - AutoCAD/Commands.md
+    - AutoCAD/Create CUI for DVB.md
+    - AutoCAD/Custom Palettes.md
+    - AutoCAD/Embedded and Global VBA Projects.md
+    - AutoCAD/Entity.md
+    - AutoCAD/Hatch.md
+    - AutoCAD/Load Autolisp File.md
+    - AutoCAD/Resources.md
+    - AutoCAD/Selection.md
+    - AutoCAD/Startup.md
+    - AutoCAD/Symbols.md
+    - AutoCAD/XData.md
 
 # Theme
 theme:

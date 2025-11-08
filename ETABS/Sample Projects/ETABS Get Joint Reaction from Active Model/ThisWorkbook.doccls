@@ -1,5 +1,0 @@
-﻿Option Explicit
-
-Private Sub Workbook_Open()
-MsgBox ("More about ETABS API on" & vbCrLf & "www.notjustforengineers.wordpress.com")
-End Sub
