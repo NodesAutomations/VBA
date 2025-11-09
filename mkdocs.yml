@@ -107,6 +107,7 @@ theme:
   name: material
   logo: assets/favicon.png
   favicon: assets/favicon.png
+  version: true
   palette:
     # Palette toggle for dark mode
     - scheme: slate
