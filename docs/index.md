@@ -13,5 +13,5 @@
   - LLM Support using Copilot and Codium
   - Open Excel, run `xlwings vba edit` and start coding
  
-### Usefull Resources
+### Useful Resources
 - [Awesome VBA](https://github.com/sancarn/awesome-vba)
