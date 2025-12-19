@@ -1,0 +1,9 @@
+title: Home
+nav:
+  - Home: index.md
+  - Code: Code
+  - Excel: Excel
+  - Outlook: Outlook
+  - PowerPoint: PowerPoint
+  - Word: Word
+  - AutoCAD: AutoCAD
