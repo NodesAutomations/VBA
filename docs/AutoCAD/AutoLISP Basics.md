@@ -1,6 +1,7 @@
 # AutoLISP Basics
 
 ## Resources
+- [AutoLISP Beginner Tutorials](https://www.afralisp.net/autolisp/tutorials/index.php?category_id=1)
 - [Beginner AutoLISP Tutorial](https://www.youtube.com/playlist?list=PLwqMD67__ep39iFjt1vBLs7MJMbKfnHz0)
 
 ## Basics
@@ -23,6 +24,41 @@
   (princ "Hello, World!")
 )
 ```
+
+## Create Custom Command
+- Below is an example of a custom command that prompts the user to select two points and then
+- `c:test` is the name of the command you will type in AutoCAD to run this function.
+```lisp
+(defun c:test ()
+    ;define the function
+ 
+	(setq a (getpoint "\nEnter First Point : "))
+	;get the first point
+ 
+	(setq b (getpoint "\nEnter Second Point : "))
+	;get the second point
+ 
+	(command "Line" a b "")
+	;draw the line
+ 
+        (princ)
+        ;clean running
+ 
+)	;end defun
+(princ)
+;clean loading
+```
+
+## Function for Calculations
+- You can also define functions that are not directly callable as commands.
+```lisp
+(defun myFunction (x y)
+  (+ x y)
+)
+(princ (myFunction 5 10)) ; This will print 15
+```
+
+
 
 ## Basic Syntax
 
@@ -87,6 +123,21 @@
 ```lisp
 (setq userPoint (getpoint "\nSelect a point: "))
 (princ userPoint) ; This will print the selected point coordinates
+```
+
+### GetDist
+- Used to get a distance from the user.
+```lisp
+(setq userDistance (getdist "\nEnter a distance: "))
+(princ userDistance) ; This will print the entered distance
+```
+
+### Polar
+- Used to calculate a new point based on a starting point, distance, and angle.
+```lisp
+(setq startPoint (getpoint "\nSelect a starting point: "))
+(setq newPoint (polar startPoint (/ pi 4) 10)) ; 45 degrees, 10 units
+(princ newPoint) ; This will print the new point coordinates
 ```
 
 ### Command 
