@@ -58,8 +58,6 @@
 (princ (myFunction 5 10)) ; This will print 15
 ```
 
-
-
 ## Basic Syntax
 
 ### Comments
