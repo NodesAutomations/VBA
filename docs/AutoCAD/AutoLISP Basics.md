@@ -23,7 +23,7 @@
 )
 ```
 
-## AutoLISP Commands
+## AutoLISP Functions
 
 ### Comments
 - Use `;` to add comments in your code. Anything after `;` on the same line is ignored by AutoLISP.
@@ -40,6 +40,12 @@
 (Princ "Hello, AutoLISP World!")
 ```
 
+### Message Box
+- Used to display a message box to the user.
+```lisp
+(alert "This is a message box!")
+```
+
 ### Command 
 - Used to execute AutoCAD commands from within AutoLISP.
 ```lisp
@@ -53,4 +59,20 @@
   (princ "10 is greater than 5")
   (princ "10 is not greater than 5")
 )
+```
+
+### Loops
+- Used to repeat a block of code multiple times.
+```lisp
+(repeat 5
+  (princ "This will print 5 times")
+)
+```
+
+
+
+### Table Search
+- Used to search for a value in a list or table.
+```lisp
+(tblsearch "value" '("value1" "value2" "value3"))
 ```
