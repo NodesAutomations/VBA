@@ -93,17 +93,29 @@
 ### IF Else Statement
 - Used for conditional execution with an alternative path.
 ```lisp
-(if (> 10 5)
-  (princ "10 is greater than 5")
-  (princ "10 is not greater than 5")
+(setq a (getreal "\nEnter a Number : ")
+    b (getreal "\nEnter Second Number : ")
+)
+(if (> a b)
+  (princ "a is greater than b")
+  (princ "a is not greater than b")
 )
 ```
 
 ### Loops
-- Used to repeat a block of code multiple times.
+- Repeat Loop
 ```lisp
 (repeat 5
   (princ "This will print 5 times")
+)
+```
+
+- While Loop
+```lisp
+(setq count 0)
+(while (< count 5)
+  (princ (strcat "\nCount is: " (itoa count)))
+  (setq count (+ count 1))
 )
 ```
 
@@ -121,6 +133,12 @@
 ```lisp
 (setq userPoint (getpoint "\nSelect a point: "))
 (princ userPoint) ; This will print the selected point coordinates
+```
+### GetReal
+- Used to get a real number from the user.
+```lisp
+(setq userReal (getreal "\nEnter a real number: "))
+(princ userReal) ; This will print the entered real number
 ```
 
 ### GetDist
