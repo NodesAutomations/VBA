@@ -81,6 +81,33 @@
 (alert "This is a message box!")
 ```
 
+### Data Types
+- Integers
+```lisp
+(setq myInteger 10)
+```
+
+- Real Numbers
+```lisp
+(setq myReal 10.5)
+```
+
+- Strings
+```lisp
+(setq myString "Hello, AutoLISP!")
+```
+
+- Lists
+```lisp
+(setq myList '(1 2 3 4 5))
+(princ myList) ; This will print the list
+
+(princ (car myList)) ; This will print the first element of the list
+(princ (cdr myList)) ; This will print the rest of the list after the first element
+(princ (cadr myList)) ; This will print the second element of the list
+(princ (caddr myList)) ; This will print the third element of the list
+```
+
 ### If Statement
 - Used for conditional execution of code.
 ```lisp
