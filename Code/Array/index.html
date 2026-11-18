@@ -11,6 +11,7 @@
         <link rel="canonical" href="https://nodesautomations.com/VBA/Code/Array/">
       
       
+      
         <link rel="prev" href="../AccessModifiers/">
       
       
@@ -20,8 +21,8 @@
         
       
       
-      <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <link rel="icon" href="../../Images/favicon.png">
+      <meta name="generator" content="zensical-0.1.2">
     
     
       
@@ -29,10 +30,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.ebb7f775.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
       
       
 
@@ -46,12 +52,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -72,14 +78,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#function-to-check-if-item-exist-in-array" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -88,16 +91,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="VBA" class="md-header__button md-logo" aria-label="VBA" data-md-component="logo">
       
-  <img src="../../assets/favicon.png" alt="logo">
+  <img src="../../Images/favicon.png" alt="VBA">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -122,7 +128,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -132,7 +138,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -151,65 +157,33 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
+    <div class="md-header__source">
+      
         <a href="https://github.com/NodesAutomations/VBA" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
   </div>
   <div class="md-source__repository">
     VBA
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -222,9 +196,6 @@
     <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
         
-  
-  
-    
   
   Home
 
@@ -241,13 +212,65 @@
   
   
     
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../AccessModifiers/" class="md-tabs__link">
           
-  
-  
-    
   
   Code
 
@@ -263,13 +286,49 @@
   
   
     
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../Excel/AdvanceFilter/" class="md-tabs__link">
           
-  
-  
-    
   
   Excel
 
@@ -285,13 +344,17 @@
   
   
     
+      
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../Outlook/Create%20button%20for%20macro/" class="md-tabs__link">
           
-  
-  
-    
   
   Outlook
 
@@ -307,13 +370,37 @@
   
   
     
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../PowerPoint/Addin/" class="md-tabs__link">
           
-  
-  
-    
   
   PowerPoint
 
@@ -329,13 +416,27 @@
   
   
     
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../Word/Bookmark/" class="md-tabs__link">
           
-  
-  
-    
   
   Word
 
@@ -351,13 +452,47 @@
   
   
     
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
       <li class="md-tabs__item">
         <a href="../../AutoCAD/AutoLISP%20Basics/" class="md-tabs__link">
           
-  
-  
-    
   
   AutoCAD
 
@@ -370,7 +505,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -391,7 +532,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="VBA" class="md-nav__button md-logo" aria-label="VBA" data-md-component="logo">
       
-  <img src="../../assets/favicon.png" alt="logo">
+  <img src="../../Images/favicon.png" alt="VBA">
 
     </a>
     VBA
@@ -401,7 +542,7 @@
       <a href="https://github.com/NodesAutomations/VBA" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
   </div>
   <div class="md-source__repository">
     VBA
@@ -425,8 +566,7 @@
   <span class="md-ellipsis">
     
   
-    Home
-  
+  Home
 
     
   </span>
@@ -523,8 +663,7 @@
   <span class="md-ellipsis">
     
   
-    Code
-  
+  Code
 
     
   </span>
@@ -534,19 +673,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    Code
-  
+  Code
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -559,8 +698,7 @@
   <span class="md-ellipsis">
     
   
-    AccessModifiers
-  
+  AccessModifiers
 
     
   </span>
@@ -571,10 +709,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -583,7 +721,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
       
@@ -594,8 +732,7 @@
   <span class="md-ellipsis">
     
   
-    Array
-  
+  Array
 
     
   </span>
@@ -605,15 +742,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Array
-  
+  Array
 
     
   </span>
@@ -624,23 +760,24 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#function-to-check-if-item-exist-in-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function to Check if Item Exist In Array
-      
+      </span>
     </span>
   </a>
   
@@ -649,9 +786,9 @@
         <li class="md-nav__item">
   <a href="#function-to-sort-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function To Sort Array
-      
+      </span>
     </span>
   </a>
   
@@ -660,9 +797,9 @@
         <li class="md-nav__item">
   <a href="#function-to-sort-single-dimention-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function to Sort Single Dimention Array
-      
+      </span>
     </span>
   </a>
   
@@ -675,10 +812,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -691,8 +828,7 @@
   <span class="md-ellipsis">
     
   
-    Class Modules
-  
+  Class Modules
 
     
   </span>
@@ -703,10 +839,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -719,8 +855,7 @@
   <span class="md-ellipsis">
     
   
-    Collections
-  
+  Collections
 
     
   </span>
@@ -731,10 +866,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -747,8 +882,7 @@
   <span class="md-ellipsis">
     
   
-    Colors
-  
+  Colors
 
     
   </span>
@@ -759,10 +893,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -775,8 +909,7 @@
   <span class="md-ellipsis">
     
   
-    ConditinalStatements
-  
+  ConditinalStatements
 
     
   </span>
@@ -787,10 +920,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -803,8 +936,7 @@
   <span class="md-ellipsis">
     
   
-    Debugging
-  
+  Debugging
 
     
   </span>
@@ -815,10 +947,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -831,8 +963,7 @@
   <span class="md-ellipsis">
     
   
-    Dictionary
-  
+  Dictionary
 
     
   </span>
@@ -843,10 +974,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -859,8 +990,7 @@
   <span class="md-ellipsis">
     
   
-    Enum
-  
+  Enum
 
     
   </span>
@@ -871,10 +1001,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -887,8 +1017,7 @@
   <span class="md-ellipsis">
     
   
-    Environment variables
-  
+  Environment variables
 
     
   </span>
@@ -899,10 +1028,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -915,8 +1044,7 @@
   <span class="md-ellipsis">
     
   
-    ErrorHandling
-  
+  ErrorHandling
 
     
   </span>
@@ -927,10 +1055,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -943,8 +1071,7 @@
   <span class="md-ellipsis">
     
   
-    Common
-  
+  Common
 
     
   </span>
@@ -955,10 +1082,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -971,8 +1098,7 @@
   <span class="md-ellipsis">
     
   
-    Loops
-  
+  Loops
 
     
   </span>
@@ -983,10 +1109,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -999,8 +1125,7 @@
   <span class="md-ellipsis">
     
   
-    Math
-  
+  Math
 
     
   </span>
@@ -1011,10 +1136,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1027,8 +1152,7 @@
   <span class="md-ellipsis">
     
   
-    MessageBox
-  
+  MessageBox
 
     
   </span>
@@ -1039,10 +1163,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1055,8 +1179,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
-  
+  Resources
 
     
   </span>
@@ -1067,10 +1190,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1083,8 +1206,7 @@
   <span class="md-ellipsis">
     
   
-    Sound
-  
+  Sound
 
     
   </span>
@@ -1095,10 +1217,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1111,8 +1233,7 @@
   <span class="md-ellipsis">
     
   
-    String
-  
+  String
 
     
   </span>
@@ -1123,10 +1244,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1139,8 +1260,7 @@
   <span class="md-ellipsis">
     
   
-    Switch between Early and Late binding
-  
+  Switch between Early and Late binding
 
     
   </span>
@@ -1151,10 +1271,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1167,8 +1287,7 @@
   <span class="md-ellipsis">
     
   
-    TextFile
-  
+  TextFile
 
     
   </span>
@@ -1179,10 +1298,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1195,8 +1314,7 @@
   <span class="md-ellipsis">
     
   
-    Time
-  
+  Time
 
     
   </span>
@@ -1207,10 +1325,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1223,8 +1341,7 @@
   <span class="md-ellipsis">
     
   
-    VBA Password
-  
+  VBA Password
 
     
   </span>
@@ -1235,10 +1352,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1251,8 +1368,7 @@
   <span class="md-ellipsis">
     
   
-    WindowsAPI
-  
+  WindowsAPI
 
     
   </span>
@@ -1263,10 +1379,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1279,8 +1395,7 @@
   <span class="md-ellipsis">
     
   
-    XML
-  
+  XML
 
     
   </span>
@@ -1291,10 +1406,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1307,8 +1422,7 @@
   <span class="md-ellipsis">
     
   
-    ZipFiles
-  
+  ZipFiles
 
     
   </span>
@@ -1319,10 +1433,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1392,8 +1507,7 @@
   <span class="md-ellipsis">
     
   
-    Excel
-  
+  Excel
 
     
   </span>
@@ -1403,19 +1517,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    Excel
-  
+  Excel
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1428,8 +1542,7 @@
   <span class="md-ellipsis">
     
   
-    AdvanceFilter
-  
+  AdvanceFilter
 
     
   </span>
@@ -1440,10 +1553,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1456,8 +1569,7 @@
   <span class="md-ellipsis">
     
   
-    Application
-  
+  Application
 
     
   </span>
@@ -1468,10 +1580,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1484,8 +1596,7 @@
   <span class="md-ellipsis">
     
   
-    Assign shortcut key
-  
+  Assign shortcut key
 
     
   </span>
@@ -1496,10 +1607,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1512,8 +1623,7 @@
   <span class="md-ellipsis">
     
   
-    Automatically install addin
-  
+  Automatically install addin
 
     
   </span>
@@ -1524,10 +1634,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1540,8 +1650,7 @@
   <span class="md-ellipsis">
     
   
-    DocumentProperties
-  
+  DocumentProperties
 
     
   </span>
@@ -1552,10 +1661,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1568,8 +1677,7 @@
   <span class="md-ellipsis">
     
   
-    Events
-  
+  Events
 
     
   </span>
@@ -1580,10 +1688,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1596,8 +1704,7 @@
   <span class="md-ellipsis">
     
   
-    FileExplorer
-  
+  FileExplorer
 
     
   </span>
@@ -1608,10 +1715,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1624,8 +1731,7 @@
   <span class="md-ellipsis">
     
   
-    Formulas
-  
+  Formulas
 
     
   </span>
@@ -1636,10 +1742,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1652,8 +1758,7 @@
   <span class="md-ellipsis">
     
   
-    Image
-  
+  Image
 
     
   </span>
@@ -1664,10 +1769,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1680,8 +1785,7 @@
   <span class="md-ellipsis">
     
   
-    Images
-  
+  Images
 
     
   </span>
@@ -1692,10 +1796,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1708,8 +1812,7 @@
   <span class="md-ellipsis">
     
   
-    Points
-  
+  Points
 
     
   </span>
@@ -1720,10 +1823,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1736,8 +1839,7 @@
   <span class="md-ellipsis">
     
   
-    Range
-  
+  Range
 
     
   </span>
@@ -1748,10 +1850,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1764,8 +1866,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
-  
+  Resources
 
     
   </span>
@@ -1776,10 +1877,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1792,8 +1893,7 @@
   <span class="md-ellipsis">
     
   
-    Sheet
-  
+  Sheet
 
     
   </span>
@@ -1804,10 +1904,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1820,8 +1920,7 @@
   <span class="md-ellipsis">
     
   
-    SpeedUp
-  
+  SpeedUp
 
     
   </span>
@@ -1832,10 +1931,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1848,8 +1947,7 @@
   <span class="md-ellipsis">
     
   
-    Table
-  
+  Table
 
     
   </span>
@@ -1860,10 +1958,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1876,8 +1974,7 @@
   <span class="md-ellipsis">
     
   
-    UserDefineFunctions
-  
+  UserDefineFunctions
 
     
   </span>
@@ -1888,10 +1985,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1929,8 +2027,7 @@
   <span class="md-ellipsis">
     
   
-    Outlook
-  
+  Outlook
 
     
   </span>
@@ -1940,19 +2037,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    Outlook
-  
+  Outlook
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1965,8 +2062,7 @@
   <span class="md-ellipsis">
     
   
-    Create button for macro
-  
+  Create button for macro
 
     
   </span>
@@ -1977,10 +2073,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2038,8 +2135,7 @@
   <span class="md-ellipsis">
     
   
-    PowerPoint
-  
+  PowerPoint
 
     
   </span>
@@ -2049,19 +2145,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    PowerPoint
-  
+  PowerPoint
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2074,8 +2170,7 @@
   <span class="md-ellipsis">
     
   
-    Addin
-  
+  Addin
 
     
   </span>
@@ -2086,10 +2181,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2102,8 +2197,7 @@
   <span class="md-ellipsis">
     
   
-    Application
-  
+  Application
 
     
   </span>
@@ -2114,10 +2208,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2130,8 +2224,7 @@
   <span class="md-ellipsis">
     
   
-    Colors
-  
+  Colors
 
     
   </span>
@@ -2142,10 +2235,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2158,8 +2251,7 @@
   <span class="md-ellipsis">
     
   
-    Images
-  
+  Images
 
     
   </span>
@@ -2170,10 +2262,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2186,8 +2278,7 @@
   <span class="md-ellipsis">
     
   
-    References
-  
+  References
 
     
   </span>
@@ -2198,10 +2289,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2214,8 +2305,7 @@
   <span class="md-ellipsis">
     
   
-    Section
-  
+  Section
 
     
   </span>
@@ -2226,10 +2316,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2242,8 +2332,7 @@
   <span class="md-ellipsis">
     
   
-    Selection
-  
+  Selection
 
     
   </span>
@@ -2254,10 +2343,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2270,8 +2359,7 @@
   <span class="md-ellipsis">
     
   
-    Shape
-  
+  Shape
 
     
   </span>
@@ -2282,10 +2370,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2298,8 +2386,7 @@
   <span class="md-ellipsis">
     
   
-    Shapes
-  
+  Shapes
 
     
   </span>
@@ -2310,10 +2397,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2326,8 +2413,7 @@
   <span class="md-ellipsis">
     
   
-    Slide
-  
+  Slide
 
     
   </span>
@@ -2338,10 +2424,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2354,8 +2440,7 @@
   <span class="md-ellipsis">
     
   
-    Table
-  
+  Table
 
     
   </span>
@@ -2366,10 +2451,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2417,8 +2503,7 @@
   <span class="md-ellipsis">
     
   
-    Word
-  
+  Word
 
     
   </span>
@@ -2428,19 +2513,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    Word
-  
+  Word
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2453,8 +2538,7 @@
   <span class="md-ellipsis">
     
   
-    Bookmark
-  
+  Bookmark
 
     
   </span>
@@ -2465,10 +2549,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2481,8 +2565,7 @@
   <span class="md-ellipsis">
     
   
-    Find and Replace
-  
+  Find and Replace
 
     
   </span>
@@ -2493,10 +2576,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2509,8 +2592,7 @@
   <span class="md-ellipsis">
     
   
-    FindReplace
-  
+  FindReplace
 
     
   </span>
@@ -2521,10 +2603,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2537,8 +2619,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
-  
+  Resources
 
     
   </span>
@@ -2549,10 +2630,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2565,8 +2646,7 @@
   <span class="md-ellipsis">
     
   
-    Remove PageNumber From Specific Section Header and Footer
-  
+  Remove PageNumber From Specific Section Header and Footer
 
     
   </span>
@@ -2577,10 +2657,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2593,8 +2673,7 @@
   <span class="md-ellipsis">
     
   
-    Table
-  
+  Table
 
     
   </span>
@@ -2605,10 +2684,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2676,8 +2756,7 @@
   <span class="md-ellipsis">
     
   
-    AutoCAD
-  
+  AutoCAD
 
     
   </span>
@@ -2687,19 +2766,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    AutoCAD
-  
+  AutoCAD
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2712,8 +2791,7 @@
   <span class="md-ellipsis">
     
   
-    AutoLISP Basics
-  
+  AutoLISP Basics
 
     
   </span>
@@ -2724,10 +2802,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2740,8 +2818,7 @@
   <span class="md-ellipsis">
     
   
-    Blocks
-  
+  Blocks
 
     
   </span>
@@ -2752,10 +2829,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2768,8 +2845,7 @@
   <span class="md-ellipsis">
     
   
-    Blocks Dynamic
-  
+  Blocks Dynamic
 
     
   </span>
@@ -2780,10 +2856,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2796,8 +2872,7 @@
   <span class="md-ellipsis">
     
   
-    Commands
-  
+  Commands
 
     
   </span>
@@ -2808,10 +2883,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2824,8 +2899,7 @@
   <span class="md-ellipsis">
     
   
-    Create CUI for DVB
-  
+  Create CUI for DVB
 
     
   </span>
@@ -2836,10 +2910,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2852,8 +2926,7 @@
   <span class="md-ellipsis">
     
   
-    Custom Palettes
-  
+  Custom Palettes
 
     
   </span>
@@ -2864,10 +2937,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2880,8 +2953,7 @@
   <span class="md-ellipsis">
     
   
-    Embedded and Global VBA Projects
-  
+  Embedded and Global VBA Projects
 
     
   </span>
@@ -2892,10 +2964,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2908,8 +2980,7 @@
   <span class="md-ellipsis">
     
   
-    Entity
-  
+  Entity
 
     
   </span>
@@ -2920,10 +2991,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2936,8 +3007,7 @@
   <span class="md-ellipsis">
     
   
-    GStarCad
-  
+  GStarCad
 
     
   </span>
@@ -2948,10 +3018,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2964,8 +3034,7 @@
   <span class="md-ellipsis">
     
   
-    Hatch
-  
+  Hatch
 
     
   </span>
@@ -2976,10 +3045,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2992,8 +3061,7 @@
   <span class="md-ellipsis">
     
   
-    Load Autolisp File
-  
+  Load Autolisp File
 
     
   </span>
@@ -3004,10 +3072,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -3020,8 +3088,7 @@
   <span class="md-ellipsis">
     
   
-    info on How to load script or initial setup
-  
+  info on How to load script or initial setup
 
     
   </span>
@@ -3032,10 +3099,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -3048,8 +3115,7 @@
   <span class="md-ellipsis">
     
   
-    Selection
-  
+  Selection
 
     
   </span>
@@ -3060,10 +3126,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -3076,8 +3142,7 @@
   <span class="md-ellipsis">
     
   
-    For setting up AutoCAD Start Up macro
-  
+  For setting up AutoCAD Start Up macro
 
     
   </span>
@@ -3088,10 +3153,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -3104,8 +3169,7 @@
   <span class="md-ellipsis">
     
   
-    Symbols
-  
+  Symbols
 
     
   </span>
@@ -3116,10 +3180,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -3132,8 +3196,7 @@
   <span class="md-ellipsis">
     
   
-    XData
-  
+  XData
 
     
   </span>
@@ -3144,10 +3207,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -3163,26 +3227,38 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#function-to-check-if-item-exist-in-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function to Check if Item Exist In Array
-      
+      </span>
     </span>
   </a>
   
@@ -3191,9 +3267,9 @@
         <li class="md-nav__item">
   <a href="#function-to-sort-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function To Sort Array
-      
+      </span>
     </span>
   </a>
   
@@ -3202,9 +3278,9 @@
         <li class="md-nav__item">
   <a href="#function-to-sort-single-dimention-array" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function to Sort Single Dimention Array
-      
+      </span>
     </span>
   </a>
   
@@ -3237,6 +3313,7 @@
     <li class="md-path__item">
       <a href="../.." class="md-path__link">
         
+  
   <span class="md-ellipsis">
     Home
   </span>
@@ -3252,9 +3329,65 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
       <li class="md-path__item">
         <a href="../AccessModifiers/" class="md-path__link">
           
+  
   <span class="md-ellipsis">
     Code
   </span>
@@ -3270,14 +3403,14 @@
 
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
-
 
   
     <a href="https://github.com/NodesAutomations/VBA/edit/main/docs/Code/Array.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
   
   
@@ -3286,7 +3419,7 @@
     
     <a href="https://github.com/NodesAutomations/VBA/raw/main/docs/Code/Array.md" title="View source of this page" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
   
 
@@ -3294,7 +3427,7 @@
   <h1>Array</h1>
 
 <h3 id="function-to-check-if-item-exist-in-array">Function to Check if Item Exist In Array</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&#39;Function To Check If Item Exist In Array
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>'Function To Check If Item Exist In Array
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Private Function IsInArray(valToBeFound As Variant, arr As Variant) As Boolean
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Dim element As Variant
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    On Error GoTo IsInArrayError:
@@ -3314,16 +3447,16 @@
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Public Sub Test()
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Dim arr() As Variant
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    ReDim arr(0 To 3, 0 To 1)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    arr(0, 0) = &quot;One1&quot;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    arr(0, 0) = "One1"
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    arr(0, 1) = 1
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    arr(1, 0) = &quot;Two&quot;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    arr(1, 0) = "Two"
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    arr(1, 1) = 2
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    arr(2, 0) = &quot;Three&quot;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    arr(2, 0) = "Three"
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    arr(2, 1) = 3
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    arr(3, 0) = &quot;One2&quot;
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    arr(3, 0) = "One2"
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    arr(3, 1) = 1
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    QuickSortArray arr, , , 1
@@ -3346,7 +3479,7 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    If IsEmpty(SortArray) Then
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        Exit Sub
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    End If
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    If InStr(TypeName(SortArray), &quot;()&quot;) &lt; 1 Then
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    If InStr(TypeName(SortArray), "()") &lt; 1 Then
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        Exit Sub
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    End If
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    If lngMin = -1 Then
@@ -3375,7 +3508,7 @@
 </span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    ElseIf IsNull(varMid) Then
 </span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>        i = lngMax
 </span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>        j = lngMin
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    ElseIf varMid = &quot;&quot; Then
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    ElseIf varMid = "" Then
 </span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>        i = lngMax
 </span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>        j = lngMin
 </span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    ElseIf VarType(varMid) = vbError Then
@@ -3418,19 +3551,19 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Public Sub QuickSortVector(ByRef SortArray As Variant, Optional lngMin As Long = -1, Optional lngMax As Long = -1)
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    On Error Resume Next
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    &#39;Sort a 1-Dimensional array
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    'Sort a 1-Dimensional array
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    &#39; SampleUsage: sort arrData
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    &#39;
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    &#39;   QuickSortVector arrData
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    ' SampleUsage: sort arrData
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    '
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    '   QuickSortVector arrData
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    &#39;
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    &#39; Originally posted by Jim Rech 10/20/98 Excel.Programming
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    '
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    ' Originally posted by Jim Rech 10/20/98 Excel.Programming
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    &#39; Modifications, Nigel Heffernan:
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    &#39;       &#39; Escape failed comparison with an empty variant in the array
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    &#39;       &#39; Defensive coding: check inputs
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    ' Modifications, Nigel Heffernan:
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    '       ' Escape failed comparison with an empty variant in the array
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    '       ' Defensive coding: check inputs
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    Dim i As Long
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    Dim j As Long
@@ -3440,7 +3573,7 @@
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    If IsEmpty(SortArray) Then
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        Exit Sub
 </span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    End If
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    If InStr(TypeName(SortArray), &quot;()&quot;) &lt; 1 Then  &#39;IsArray() is somewhat broken: Look for brackets in the type name
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    If InStr(TypeName(SortArray), "()") &lt; 1 Then  'IsArray() is somewhat broken: Look for brackets in the type name
 </span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        Exit Sub
 </span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    End If
 </span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    If lngMin = -1 Then
@@ -3449,7 +3582,7 @@
 </span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    If lngMax = -1 Then
 </span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        lngMax = UBound(SortArray)
 </span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    End If
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>    If lngMin &gt;= lngMax Then    &#39; no sorting required
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>    If lngMin &gt;= lngMax Then    ' no sorting required
 </span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        Exit Sub
 </span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>    End If
 </span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>
@@ -3459,8 +3592,8 @@
 </span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    varMid = Empty
 </span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>    varMid = SortArray((lngMin + lngMax) \ 2)
 </span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
-</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    &#39; We  send &#39;Empty&#39; and invalid data items to the end of the list:
-</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    If IsObject(varMid) Then  &#39; note that we don&#39;t check isObject(SortArray(n)) - varMid *might* pick up a default member or property
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    ' We  send 'Empty' and invalid data items to the end of the list:
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    If IsObject(varMid) Then  ' note that we don't check isObject(SortArray(n)) - varMid *might* pick up a default member or property
 </span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>        i = lngMax
 </span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        j = lngMin
 </span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>    ElseIf IsEmpty(varMid) Then
@@ -3469,7 +3602,7 @@
 </span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>    ElseIf IsNull(varMid) Then
 </span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>        i = lngMax
 </span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>        j = lngMin
-</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>    ElseIf varMid = &quot;&quot; Then
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>    ElseIf varMid = "" Then
 </span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>        i = lngMax
 </span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>        j = lngMin
 </span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>    ElseIf VarType(varMid) = vbError Then
@@ -3490,7 +3623,7 @@
 </span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>        Wend
 </span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>
 </span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>        If i &lt;= j Then
-</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>            &#39; Swap the item
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>            ' Swap the item
 </span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>            varX = SortArray(i)
 </span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>            SortArray(i) = SortArray(j)
 </span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>            SortArray(j) = varX
@@ -3518,6 +3651,8 @@
 
 
 
+
+
                 
               </article>
             </div>
@@ -3525,6 +3660,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -3535,58 +3676,9 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 Nodes Automations
+      Copyright &copy; 2027 Nodes Automations
     </div>
   
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://nodesautomations.com" target="_blank" rel="noopener" title="nodesautomations.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
-    </a>
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://www.youtube.com/NodesAutomations" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
-    </a>
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://www.linkedin.com/in/vivekpatel-nodesautomations/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
-    </a>
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://github.com/orgs/NodesAutomations" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-    </a>
   
 </div>
       
@@ -3595,7 +3687,7 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -3603,10 +3695,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.path", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.action.edit","content.action.view","content.code.copy","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.indexes","navigation.top","toc.follow","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3cb411a8.min.js"></script>
       
     
   </body>
